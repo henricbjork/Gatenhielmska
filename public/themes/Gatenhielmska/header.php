@@ -12,13 +12,17 @@
 <body <?php body_class(); ?>>
     <header>
 
-        <nav role="navigation">
+        <div class="nav-bar">
+            <img class="menu-icon" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/menu.svg" />
+            <img class="logo" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/logowhite.svg" />
+            <img class="search-icon" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/menu.svg" />
+        </div>
+
+        <nav role="navigation" class="navigation-menu">
+            <img class="menu-icon" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/menu.svg" />
+            <img class="logo" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/logoblack.svg" />
             <?php wp_nav_menu(['theme_location' => 'navigation']); ?>
         </nav>
 
-        <div>
-            <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/menu.svg" />
-            <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/logo.svg" />
-        </div>
 
     </header>
