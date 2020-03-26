@@ -16,7 +16,7 @@
             <?php wp_nav_menu(['theme_location' => 'navigation']); ?>
         </nav>
 
-        <div >
+        <div>
             <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/menu.svg" />
             <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/logo.svg" />
         </div>

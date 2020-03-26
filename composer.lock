@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c1798e2d3fca9fc34b5bad349c9c027a",
+    "content-hash": "33b48eeb351795e40301202e12e88e78",
     "packages": [
         {
             "name": "composer/installers",
@@ -1046,6 +1046,24 @@
                 "wordpress"
             ],
             "time": "2019-08-08T13:02:18+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/acf-better-search",
+            "version": "3.5.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/acf-better-search/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/acf-better-search.zip?timestamp=1584629788"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/acf-better-search/"
         },
         {
             "name": "wpackagist-plugin/advanced-custom-fields",
