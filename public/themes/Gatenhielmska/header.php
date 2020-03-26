@@ -14,12 +14,12 @@
 
         <div class="nav-bar">
             <img class="menu-icon" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/menu.svg" />
-            <img class="logo" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/logowhite.svg" />
-            <img class="search-icon" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/menu.svg" />
+            <a href="http://localhost:8000/hem"><img class="logo" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/logowhite.svg" /></a>
+            <img class="search-icon" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/search.svg" />
         </div>
 
         <nav role="navigation" class="navigation-menu">
-            <img class="menu-icon" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/menu.svg" />
+            <img class="cross-icon" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/cross.svg" />
             <img class="logo" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/logoblack.svg" />
             <?php wp_nav_menu(['theme_location' => 'navigation']); ?>
         </nav>
