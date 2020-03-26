@@ -8,7 +8,7 @@ require get_theme_file_path('includes/plugins/plate.php');
 // Set theme defaults.
 add_action('after_setup_theme', function () {
     // Disable the admin toolbar.
-    show_admin_bar(false);
+    show_admin_bar(true);
 
     // Add post thumbnails support.
     add_theme_support('post-thumbnails');
@@ -25,6 +25,16 @@ add_action('after_setup_theme', function () {
         'search-form',
         'widgets',
     ]);
+
+
+    // Register Event custom post type. / Vigge
+    require get_template_directory() . '/post-types/events.php';
+
+    // Register Event Type Taxonomy to Event custom post type // Vigge
+    require get_template_directory() . '/taxonomies/event-type.php';
+
+    // Register News custom post type. / Vigge
+    require get_template_directory() . '/post-types/news.php';
 
     // Register navigation menus.
     register_nav_menus([
