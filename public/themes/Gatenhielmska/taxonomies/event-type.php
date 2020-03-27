@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 add_action('init', function () {
-    register_taxonomy('Event type', ['events'], [
+    register_taxonomy('event-type', ['events'], [
         'hierarchical' => true,
         'labels' => [
             'add_new_item' => __('Add New Event type'),

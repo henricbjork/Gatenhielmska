@@ -30,11 +30,13 @@
 
             <p><?php echo $postContent ?></p>
 
-            <?php $eventTypes = get_the_terms($post, 'events'); ?>
+            <?php $eventTypes = get_the_terms($post, 'event-type'); ?>
+
 
             <p>Event type:</p>
             <ul>
                 <?php foreach ($eventTypes as $eventType) : ?>
+
                     <li>
                         <a href="<?php echo get_term_link($eventType) ?>"><?php echo $eventType->name ?></a>
                     </li>
