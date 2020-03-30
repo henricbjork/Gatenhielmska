@@ -39,6 +39,10 @@
 
         <?php foreach ($events as $post) : setup_postdata($post); ?>
 
+            <?php if (has_post_thumbnail()) {
+                the_post_thumbnail('medium');
+            } ?>
+
             <h1><?php the_title(); ?></h1>
 
             <?php $postContent = get_the_content($post) ?>
@@ -48,15 +52,28 @@
             <?php $eventTypes = get_the_terms($post, 'event-type'); ?>
 
 
-            <p>Event type:</p>
-            <ul>
+            <p>Event type:
                 <?php foreach ($eventTypes as $eventType) : ?>
-
-                    <li>
-                        <a href="<?php echo get_term_link($eventType) ?>"><?php echo $eventType->name ?></a>
-                    </li>
+                    <a href="<?php echo get_term_link($eventType) ?>"><?php echo $eventType->name ?></a>
                 <?php endforeach; ?>
-            </ul>
+            </p>
+
+            <?php if (get_field('date')) : ?>
+                <p>Datum: <?php the_field('date'); ?></p>
+            <?php endif; ?>
+            <?php if (get_field('time')) : ?>
+                <p>Starttid: <?php the_field('time'); ?></p>
+            <?php endif; ?>
+            <?php if (get_field('price_regular')) : ?>
+                <p>Pris: <?php the_field('price_regular'); ?></p>
+            <?php endif; ?>
+            <?php if (get_field('price_special')) : ?>
+                <p>Pris Student/Pensionär: <?php the_field('price_special'); ?></p>
+            <?php endif; ?>
+            <?php if (get_field('social_media')) : ?>
+                <p>Sociala Medier: <a href="<?php the_field('social_media'); ?>"><?php the_field('social_media'); ?></a></p>
+            <?php endif; ?>
+
         <?php endforeach; ?>
 
     <?php endif; ?>
