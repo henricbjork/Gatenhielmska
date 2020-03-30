@@ -1,12 +1,27 @@
 <?php get_header(); ?>
 
+<section class="banner">
+    <img class="banner-image" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/bannerimage.png" />
+    <img class="logo" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/logoblack.svg" />
+    <h1>GATENHIELMSKA</h1>
+
+    <div class="news">
+        <p>På gång i huset</p>
+        <div class="news-items">
+            <article>
+                <h1>placeholder nyhet</h1>
+            </article>
+            <article>
+                <h1>placeholder nyhet</>
+            </article>
+        </div>
+        <button>Fler nyheter</button>
+    </div>
+</section>
+
 <main role="main">
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
             <article>
-                <header>
-
-                </header>
-
                 <?php the_content(); ?>
             </article>
         <?php endwhile;
