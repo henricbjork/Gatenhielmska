@@ -1,0 +1,66 @@
+.banner {
+  background: $lightpink;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  .banner-image {
+    width: 375px;
+    height: 256px;
+  }
+  .logo {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 10px;
+  }
+  h1 {
+    font-family: $minion;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: $dark;
+    margin-bottom: 50px;
+  }
+  .news {
+    background: $pink;
+    width: 327px;
+    padding: 16px;
+    border-radius: 6px;
+    position: relative;
+    z-index: 1;
+
+    p {
+      color: #555555;
+      font-family: $avenir;
+      text-transform: uppercase;
+      font-style: normal;
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: 0.04em;
+    }
+    .news-items {
+      margin-bottom: 25px;
+    }
+    button {
+      position: absolute;
+      bottom: -17px;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      width: 111px;
+      height: 38px;
+      background: $orange;
+      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+      border-radius: 6px;
+      color: $white;
+      font-size: 14px;
+      border: none;
+    }
+  }
+}
