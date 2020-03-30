@@ -36,6 +36,9 @@ add_action('after_setup_theme', function () {
     // Register News custom post type. / Vigge
     require get_template_directory() . '/post-types/news.php';
 
+    // Registration of event field group
+    require get_template_directory() . '/fields/event.php';
+
     // Register navigation menus.
     register_nav_menus([
         'navigation' => __('Navigation', 'wordplate'),
