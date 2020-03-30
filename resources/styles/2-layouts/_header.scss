@@ -1,5 +1,5 @@
 .nav-bar {
-  background: #c4c4c4;
+  background: $bluegreen;
   height: 55px;
   display: flex;
   align-items: center;
@@ -22,8 +22,8 @@
 }
 
 .navigation-menu {
-  background: #e5e5e5;
-  height: 100vh;
+  background: $bluegreen;
+  height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -32,12 +32,14 @@
   position: absolute;
   top: -100vh;
   transition: 0.8s;
+  z-index: 10;
 
-  //temporary, switch for cross svg later
   .cross-icon {
     position: absolute;
     top: 20px;
     left: 20px;
+    height: 32px;
+    width: 32px;
   }
 
   .logo {
@@ -50,9 +52,9 @@
     ul {
       list-style: none;
       li {
-        margin: 40px;
+        margin: 30px;
         text-align: center;
-        font-family: Minion Pro;
+        font-family: $minion;
         font-style: normal;
         font-weight: bold;
         font-size: 26px;
@@ -61,7 +63,7 @@
         letter-spacing: 0.04em;
         a {
           text-decoration: none;
-          color: #000;
+          color: $white;
         }
       }
     }
