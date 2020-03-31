@@ -1,0 +1,119 @@
+.news-page{
+    background: $lightpink;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    
+    .news-title{
+    font-family: EB Garamond;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top:24px;
+    }
+
+    .filter{
+        display:flex;
+        width:-webkit-fill-available;
+        margin-left: 24px;
+    }
+        .news-filter{
+            width:118px;
+            height:32px;
+            background: $bluegreen;
+            border:none;
+            border-radius: 6px;
+            color: white;
+            margin-top:24px;
+            font-family: Lato;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 14px;
+            text-align: center;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .news-card{
+            width:327px;
+            margin: 24px 0 24px 0;
+            padding-bottom:24px;
+            background: $pink;
+            border-radius: 6px 0 6px 6px;
+
+            .news-card-image{
+            width:327;
+            height:264px;
+            border-radius: 6px 0 0 0;
+            }
+
+            .news-card-header{
+                font-family: EB Garamond;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 29px;
+                margin: 14px 16px 0 16px;
+            }
+            .news-card-text{
+
+                .news-card-paragraph{
+                    font-family: Avenir;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 12px;
+                    line-height: 140%;
+                    margin: 14px 16px 0 16px;
+                    height:65px;
+                    overflow:hidden;                    
+                }
+
+                .visible{
+                    overflow:visible;
+                    height:auto;
+                }
+
+                .hidden{
+                    display:none;
+                }
+                
+                .news-read-more-button{
+                    font-size:100%;
+                    border:0;
+                    padding:0;
+                    background: none;
+                    font-family: Avenir;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 12px;
+                    line-height: 140%;
+                    margin: 14px 16px 0 16px;
+                }
+
+                .read-less{
+                    display:flex;
+                    justify-content:center;
+
+                    .news-read-less-button{
+                        font-size:100%;
+                        border:0;
+                        padding:0;
+                        background:none;
+                        margin-top:14px;
+                    }
+                }
+                
+                .read-more-span{
+                    border-bottom: 1px solid black;
+                }
+                
+            }
+        }
+    
+};
