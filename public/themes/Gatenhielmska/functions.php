@@ -39,6 +39,10 @@ add_action('after_setup_theme', function () {
     // Registration of event field group
     require get_template_directory() . '/fields/event.php';
 
+    // Registration of news field group
+
+    require get_template_directory() . '/fields/news.php';
+
     // Register navigation menus.
     register_nav_menus([
         'navigation' => __('Navigation', 'wordplate'),

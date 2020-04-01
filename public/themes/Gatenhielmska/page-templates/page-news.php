@@ -1,5 +1,6 @@
 <?php /* Template Name: News */ ?>
 
+
 <?php get_header(); ?>
 
 
@@ -16,13 +17,21 @@
         <?php foreach ($news as $post) : setup_postdata($post); ?>
             <?php $postContent = get_the_content($post) ?>
 
+            <?php
+            $image = get_field('image');
+            $size = array('327', '264');
+            ?>
 
 
             <div class="news-card">
-                <img class="news-card-image" src="https://picsum.photos/327/264" alt="Image">
+                <?php echo wp_get_attachment_image($image, $size, "", ["class" => "news-card-image"]); ?>
                 <div class="news-card-text">
                     <h1 class="news-card-header"><?php the_title(); ?></h1>
-                    <p class="news-card-paragraph"><?php echo $postContent ?></p>
+
+                    <?php if (get_field('content')) : ?>
+                        <p class="news-card-paragraph"><?php the_field('content'); ?></p>
+                    <?php endif ?>
+
                     <button class="news-read-more-button"><span class="read-more-span">Läs mer..</span></button>
                     <div class="read-less">
                         <button class="news-read-less-button hidden"><img src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/arrow.svg" alt="">
