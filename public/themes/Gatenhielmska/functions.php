@@ -45,10 +45,17 @@ add_action('after_setup_theme', function () {
     ]);
 });
 
+
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('style', get_stylesheet_directory_uri() . '/assets/styles/app.css');
     wp_enqueue_script('script', get_template_directory_uri() . '/assets/scripts/app.js', [], false, true);
 });
+
+function custom_add_google_fonts()
+{
+    wp_enqueue_style('custom-google-fonts', 'https://fonts.googleapis.com/css?family=EB+Garamond|Lato&display=swap', false);
+}
+add_action('wp_enqueue_scripts', 'custom_add_google_fonts');
 
 
 // Remove JPEG compression.

@@ -7,6 +7,7 @@
     <meta name="theme-color" content="#6d9aea">
 
     <?php wp_head(); ?>
+    <!-- <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Lato&display=swap" rel="stylesheet"> -->
 </head>
 
 <body <?php body_class(); ?>>
