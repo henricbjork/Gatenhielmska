@@ -7,7 +7,6 @@
     <meta name="theme-color" content="#6d9aea">
 
     <?php wp_head(); ?>
-    <!-- <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Lato&display=swap" rel="stylesheet"> -->
 </head>
 
 <body <?php body_class(); ?>>
@@ -24,5 +23,16 @@
             <img class="logo" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/logowhite.svg" />
             <?php wp_nav_menu(['theme_location' => 'navigation']); ?>
         </nav>
+
+        <?php if ($pagename === 'om-huset' || $pagename === 'galleri' || $pagename === '') : ?>
+
+            <section class="banner">
+                <img class="banner-image" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/bannerimage.png" />
+                <img class="logo" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/logoblack.svg" />
+                <h1>GATENHIELMSKA</h1>
+            </section>
+
+        <?php endif; ?>
+
 
     </header>

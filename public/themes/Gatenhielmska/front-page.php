@@ -1,19 +1,23 @@
 <?php get_header(); ?>
 
-<section class="banner">
-    <img class="banner-image" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/bannerimage.png" />
-    <img class="logo" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/logoblack.svg" />
-    <h1>GATENHIELMSKA</h1>
-
+<section class="news-section">
     <div class="news">
-        <p>På gång i huset</p>
+        <p class="news-prompt">På gång i huset</p>
         <div class="news-items">
-            <article>
-                <h1>placeholder nyhet</h1>
-            </article>
-            <article>
-                <h1>placeholder nyhet</>
-            </article>
+            <?php $news = get_posts(['post_type' => 'news']); ?>
+            <?php if (count($news)) : ?>
+                <?php foreach ($news as $post) : setup_postdata($post); ?>
+                    <?php $postContent = get_the_content($post) ?>
+                    <div class="news-card">
+                        <div class="news-card-text">
+                            <h1 class="news-card-header"><?php the_title(); ?></h1>
+                            <?php if (get_field('content')) : ?>
+                                <p class="news-card-paragraph"><?php the_field('content'); ?></p>
+                            <?php endif ?>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            <?php endif; ?>
         </div>
         <button>Fler nyheter</button>
     </div>
@@ -64,22 +68,6 @@ else : ?>
                         <button class="ticket-button">Köp Biljett</button>
                     </div>
                 </div>
-
-                <div class="event-expanded">
-                    <?php $postContent = get_the_content($post) ?>
-                    <p><?php echo $postContent ?></p>
-                    <?php if (get_field('price_regular')) : ?>
-                        <p>Pris: <?php the_field('price_regular'); ?></p>
-                    <?php endif; ?>
-                    <?php if (get_field('price_special')) : ?>
-                        <p>Pris Student/Pensionär: <?php the_field('price_special'); ?></p>
-                    <?php endif; ?>
-                    <?php if (get_field('social_media')) : ?>
-                        <p>Sociala Medier: <a href="<?php the_field('social_media'); ?>"><?php the_field('social_media'); ?></a></p>
-                    <?php endif; ?>
-                </div>
-
-
             <?php endforeach; ?>
         </div>
 
