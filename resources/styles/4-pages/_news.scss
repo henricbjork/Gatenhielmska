@@ -40,20 +40,21 @@
             text-align: center;
             letter-spacing: 0.04em;
             text-transform: uppercase;
+      
         }
-
+        
         .filter-content{
             display:flex;
             flex-direction:column;
             position:relative;
             border-bottom-right-radius: 6px;
             border-bottom-left-radius: 6px;
-            height:395px;
+            height: 395px;
             width: 327px;
             border-right:1px solid lightgrey;
             border-left:1px solid lightgrey;
+
             
-        
                .checkboxes{
                 display:flex;
                 align-items: center;
