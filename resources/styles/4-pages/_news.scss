@@ -40,7 +40,18 @@
             text-align: center;
             letter-spacing: 0.04em;
             text-transform: uppercase;
-      
+            z-index:1;
+        }
+
+        .news-filter-borders{
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius:0;
+        }
+
+        .filter-content.toggle-filter{
+            height: 395px;
+            transition: height 0.10s ease-out;
+            opacity: 1;
         }
         
         .filter-content{
@@ -49,7 +60,8 @@
             position:relative;
             border-bottom-right-radius: 6px;
             border-bottom-left-radius: 6px;
-            height: 395px;
+            height: 0;
+            opacity:0;
             width: 327px;
             border-right:1px solid lightgrey;
             border-left:1px solid lightgrey;
