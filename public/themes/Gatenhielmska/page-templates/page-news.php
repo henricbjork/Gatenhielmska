@@ -8,8 +8,39 @@
 <section class="news-page">
 
     <h1 class="news-title"><?php the_title(); ?></h1>
+
     <div class="filter">
         <button class="news-filter">Filtrera</button>
+        <form class="filter-content">
+
+            <div class="checkboxes">
+                <input class="checkbox" type="checkbox" value="workshop">
+                <label class="checkbox-label" for="workshop">Workshop</label>
+            </div>
+            <div class="checkboxes">
+                <input class="checkbox" type="checkbox" value="dance">
+                <label class="checkbox-label" for="dance">Dansuppvisning</label>
+            </div>
+            <div class="checkboxes">
+                <input class="checkbox" type="checkbox" value="concert">
+                <label class="checkbox-label" for="concert">Workshop</label>
+            </div>
+            <div class="checkboxes">
+                <input class="checkbox" type="checkbox" value="exhibition">
+                <label class="checkbox-label" for="exhibition">Utställning</label>
+            </div>
+            <div class="checkboxes">
+                <input class="checkbox" type="checkbox" value="theater">
+                <label class="checkbox-label" for="theater">Teater</label>
+            </div>
+            <div class="checkboxes">
+                <input class="checkbox" type="checkbox" value="other">
+                <label class="checkbox-label" for="other">Övrigt</label>
+            </div>
+
+            <input class="filter-search-field" type="text" placeholder="Sök">
+            <button class="news-filter-show">Visa</button>
+        </form>
     </div>
 
     <?php $news = get_posts(['post_type' => 'news']); ?>
