@@ -10,18 +10,20 @@ cross.addEventListener("click", e => {
   menu.classList.remove("appear");
 });
 
-const newsParagraph = document.querySelector(".news-card-paragraph");
-const readMoreNews = document.querySelector(".news-read-more-button");
-const readLessNews = document.querySelector(".news-read-less-button");
+const newsCards = document.querySelectorAll(".news-card");
 
-readMoreNews.addEventListener("click", () => {
-  newsParagraph.classList.add("visible");
-  readMoreNews.classList.add("hidden");
-  readLessNews.classList.remove("hidden");
-});
-
-readLessNews.addEventListener("click", () => {
-  newsParagraph.classList.remove("visible");
-  readMoreNews.classList.remove("hidden");
-  readLessNews.classList.add("hidden");
+newsCards.forEach(card => {
+  const readMoreButton = card.querySelector(".news-read-more-button");
+  const readLessButton = card.querySelector(".news-read-less-button");
+  const newsParagraph = card.querySelector(".news-card-paragraph");
+  readMoreButton.addEventListener("click", () => {
+    newsParagraph.classList.add("visible");
+    readMoreButton.classList.add("hidden");
+    readLessButton.classList.remove("hidden");
+  });
+  readLessButton.addEventListener("click", () => {
+    newsParagraph.classList.remove("visible");
+    readMoreButton.classList.remove("hidden");
+    readLessButton.classList.add("hidden");
+  });
 });
