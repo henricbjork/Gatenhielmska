@@ -27,3 +27,13 @@ newsCards.forEach(card => {
     readLessButton.classList.add("hidden");
   });
 });
+
+// onclick news filter.
+
+const filterNewsContent = document.querySelector(".filter-content");
+const filterNewsButton = document.querySelector(".news-filter");
+
+filterNewsButton.addEventListener("click", () => {
+  filterNewsContent.classList.toggle("toggle-filter");
+  filterNewsButton.classList.toggle("news-filter-borders");
+});
