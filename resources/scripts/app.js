@@ -1,6 +1,16 @@
 const menu = document.querySelector(".navigation-menu");
 const hamburger = document.querySelector(".menu-icon");
 const cross = document.querySelector(".cross-icon");
+const eventReadMoreBtn = document.querySelector(".event-read-more");
+const expandedEvent = document.querySelector(".event-card-expanded");
+const eventThumbnail = document.querySelector(".thumbnail-image");
+const eventShortInfo = document.querySelector(".event-short-info");
+
+eventReadMoreBtn.addEventListener("click", e => {
+  expandedEvent.classList.toggle("expand");
+  eventThumbnail.classList.toggle("image-appear");
+  eventShortInfo.classList.toggle("hide");
+});
 
 hamburger.addEventListener("click", e => {
   menu.classList.add("appear");

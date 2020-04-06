@@ -40,41 +40,63 @@ else : ?>
     <section class="events">
         <h2>Evenemang & Utställningar</h2>
 
-        <div class="event-cards">
-            <?php foreach ($events as $post) : setup_postdata($post); ?>
+        <?php foreach ($events as $post) : setup_postdata($post); ?>
+            <?php $eventTypes = get_the_terms($post, 'event-type'); ?>
 
-                <?php $eventTypes = get_the_terms($post, 'event-type'); ?>
-
+            <div class="event-card-wrapper">
                 <div class="event-card">
                     <div class="event-date">
-                        <?php if (get_field('date')) : ?>
-                            <p><?php the_field('date'); ?></p>
-                        <?php endif; ?>
-                        <?php if (get_field('time')) : ?>
-                            <p><?php the_field('time'); ?></p>
-                        <?php endif; ?>
+                        <p><?php if (get_field('date')) : ?>
+                                <p><?php the_field('date'); ?></p>
+                            <?php endif; ?>
+                            <?php if (get_field('time')) : ?>
+                                <p><?php the_field('time'); ?></p>
+                            <?php endif; ?></p>
                     </div>
-                    <div class="event-info">
+                    <div class="event-thumbnail">
+                        <?php if (has_post_thumbnail()) {
+                            the_post_thumbnail('medium', ['class' => 'thumbnail-image']);
+                        } ?>
+
+                    </div>
+                    <div class="event-short-info">
                         <p>
                             <?php foreach ($eventTypes as $eventType) : ?>
                                 <a class="event-type" href="<?php echo get_term_link($eventType) ?>"><?php echo $eventType->name ?></a>
                             <?php endforeach; ?>
                         </p>
                         <h1 class="event-name"><?php the_title(); ?></h1>
-                        <?php if (has_post_thumbnail()) {
-                            the_post_thumbnail('medium');
-                        } ?>
-                        <button class="event-read-more-button"><span class="event-read-more-span">Läs mer..</span></button>
-                        <button class="ticket-button">Köp Biljett</button>
                     </div>
                 </div>
+                <div class="event-card-expanded">
+                    <p>
+                        <?php foreach ($eventTypes as $eventType) : ?>
+                            <a class="event-type" href="<?php echo get_term_link($eventType) ?>"><?php echo $eventType->name ?></a>
+                        <?php endforeach; ?>
+                    </p>
+                    <h1 class="event-name"><?php the_title(); ?></h1>
+                    <p><?php the_content() ?></p>
+                    <p>Välkomna!</p>
+                    <?php if (get_field('price')) : ?>
+                        <p><?php the_field('price'); ?>:- </p>
+                    <?php endif; ?>
+                    <?php if (get_field('price_special')) : ?>
+                        <p><?php the_field('price_special'); ?>:- </p>
+                    <?php endif; ?>
+                    <?php if (get_field('social_media')) : ?>
+                        <p><?php the_field('social_media'); ?></p>
+                    <?php endif; ?>
+                    <p>Livestream: </p>
+                    <p>youtube.com</p>
+                </div>
+
+                <div class="event-buttons">
+                    <button class="event-read-more">Läs mer</button>
+                    <button class="buy-ticket">Köp biljett</button>
+                </div>
             <?php endforeach; ?>
-        </div>
-
-    <?php endif; ?>
-    <button class="more-news-button">Alla evenemang</button>
+            </div> <?php endif; ?>
     </section>
-
     <section class="news-letter">
         <div class="news-letter-box">
             <h1>Nyhetsbrev</h1>
