@@ -8,7 +8,7 @@
             <?php if (count($news)) : ?>
                 <?php foreach ($news as $post) : setup_postdata($post); ?>
                     <?php $postContent = get_the_content($post) ?>
-                    <div class="news-card">
+                    <div class="news-card-start">
                         <div class="news-card-text">
                             <h1 class="news-card-header"><?php the_title(); ?></h1>
                             <?php if (get_field('content')) : ?>
@@ -37,8 +37,8 @@ else : ?>
 <?php $events = get_posts(['post_type' => 'events']); ?>
 
 <?php if (count($events)) : ?>
+    <h2 class="event-header">Evenemang & Utställningar</h2>
     <section class="events">
-        <h2>Evenemang & Utställningar</h2>
 
         <?php foreach ($events as $post) : setup_postdata($post); ?>
             <?php $eventTypes = get_the_terms($post, 'event-type'); ?>
@@ -54,17 +54,15 @@ else : ?>
                             <?php endif; ?></p>
                     </div>
                     <div class="event-thumbnail">
-                        <?php if (has_post_thumbnail()) {
-                            the_post_thumbnail('medium', ['class' => 'thumbnail-image']);
-                        } ?>
-
+                        <?php
+                        $image = get_field('image');
+                        ?>
+                        <?php echo wp_get_attachment_image($image, "", "", ["class" => "thumbnail-image"]); ?>
                     </div>
                     <div class="event-short-info">
-                        <p>
-                            <?php foreach ($eventTypes as $eventType) : ?>
-                                <a class="event-type" href="<?php echo get_term_link($eventType) ?>"><?php echo $eventType->name ?></a>
-                            <?php endforeach; ?>
-                        </p>
+                        <?php foreach ($eventTypes as $eventType) : ?>
+                            <a class="event-type" href="<?php echo get_term_link($eventType) ?>"><?php echo $eventType->name ?></a>
+                        <?php endforeach; ?>
                         <h1 class="event-name"><?php the_title(); ?></h1>
                     </div>
                 </div>
@@ -75,27 +73,35 @@ else : ?>
                         <?php endforeach; ?>
                     </p>
                     <h1 class="event-name"><?php the_title(); ?></h1>
-                    <p><?php the_content() ?></p>
-                    <p>Välkomna!</p>
-                    <?php if (get_field('price')) : ?>
-                        <p><?php the_field('price'); ?>:- </p>
+                    <?php if (get_field('content')) : ?>
+                        <p class="event-content"><?php the_field('content') ?></p>
                     <?php endif; ?>
-                    <?php if (get_field('price_special')) : ?>
-                        <p><?php the_field('price_special'); ?>:- </p>
-                    <?php endif; ?>
+                    <div class="event-prices">
+                        <?php if (get_field('regular_price')) : ?>
+                            <p>Entré: <?php the_field('regular_price'); ?>:- </p>
+                        <?php endif; ?>
+                        <?php if (get_field('special_price')) : ?>
+                            <p>Student/Pensionär: <?php the_field('special_price'); ?>:- </p>
+                        <?php endif; ?>
+                    </div>
                     <?php if (get_field('social_media')) : ?>
                         <p><?php the_field('social_media'); ?></p>
                     <?php endif; ?>
-                    <p>Livestream: </p>
-                    <p>youtube.com</p>
+                    <?php if (get_field('livestream')) : ?>
+                        <p>LIVESTREAM: </p>
+                        <a href="<?php the_field('livestream') ?>">Klicka här!</a>
+                    <?php endif; ?>
+
                 </div>
 
                 <div class="event-buttons">
                     <button class="event-read-more">Läs mer</button>
                     <button class="buy-ticket">Köp biljett</button>
                 </div>
-            <?php endforeach; ?>
-            </div> <?php endif; ?>
+
+            </div>
+        <?php endforeach; ?>
+    <?php endif; ?>
     </section>
     <section class="news-letter">
         <div class="news-letter-box">

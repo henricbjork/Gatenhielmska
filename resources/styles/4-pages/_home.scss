@@ -55,7 +55,7 @@
       margin-bottom: 25px;
     }
 
-    .news-card {
+    .news-card-start {
       .news-card-text {
         h1 {
           font-size: 22px;
@@ -88,23 +88,33 @@
   }
 }
 
+.event-header {
+  background: $pink;
+  text-align: center;
+  font-family: $minion;
+  font-size: 20px;
+  padding: 16px;
+}
+
 .events {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  background: $pink;
 
   .event-card-wrapper {
     position: relative;
-    border: 2px solid red;
+    background: $lightpink;
     display: flex;
     flex-direction: column;
     width: 351px;
+    margin-bottom: 16px;
+    border-radius: 6px 0px 0px 6px;
 
     .event-card {
       display: flex;
       width: 351px;
       height: 128px;
-      border: 1px solid black;
     }
 
     .event-date {
@@ -113,15 +123,33 @@
       background: $bluegreen;
       border-radius: 6px 0px 0px 0px;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       color: $white;
+      font-family: $avenir;
+      font-size: 16px;
     }
 
     .event-short-info {
       display: block;
+      margin: 8px;
     }
 
+    .event-type {
+      font-family: $avenir;
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      color: $textgrey;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .event-name {
+      font-family: $minion;
+      font-size: 22px;
+      color: #000000;
+    }
     .hide {
       display: none;
     }
@@ -147,17 +175,52 @@
     .event-card-expanded {
       height: 0;
       overflow: hidden;
-      transition: 0.8s;
+
+      p {
+        font-family: $avenir;
+        font-size: 14px;
+      }
+
+      .event-name {
+        margin-bottom: 16px;
+      }
+      .event-content {
+        margin-bottom: 16px;
+        width: 295px;
+        line-height: 20px;
+      }
+      .event-prices {
+        margin: 16px 0px 16px 0px;
+      }
     }
 
     .expand {
       height: auto;
+      padding: 8px 0px 50px 16px;
     }
 
     .event-buttons {
       position: absolute;
       bottom: 0;
       right: 0;
+
+      .event-read-more {
+        width: 124px;
+        height: 32px;
+        background: none;
+        border: none;
+      }
+
+      .buy-ticket {
+        width: 142px;
+        height: 32px;
+        background: $orange;
+        box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 6px 0px 0px 0px;
+        font-family: $avenir;
+        font-size: 12px;
+        color: $white;
+      }
     }
   }
 }
