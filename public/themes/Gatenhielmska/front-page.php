@@ -40,36 +40,62 @@ else : ?>
     <section class="events">
         <h2>Evenemang & Utställningar</h2>
 
-        <div class="event-card-wrapper">
-            <div class="event-card">
-                <div class="event-date">
-                    <p>12</p>
-                    <p>maj</p>
-                </div>
-                <div class="event-thumbnail">
-                    <img class="thumbnail-image" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/bannerimage.png" />
-                </div>
-                <div class="event-short-info">
-                    <p>Type of event</p>
-                    <h1>Name of event</h1>
-                </div>
-            </div>
-            <div class="event-card-expanded">
-                <p>Type of event</p>
-                <h1>Name of event</h1>
-                <p>Information about the event</p>
-                <p>Välkomna!</p>
-                <p>Entre: 100kr</p>
-                <p>Student/Pensionär: 35kr</p>
-                <p>Livestream: </p>
-                <p>Länk till livestream</p>
-            </div>
+        <?php foreach ($events as $post) : setup_postdata($post); ?>
+            <?php $eventTypes = get_the_terms($post, 'event-type'); ?>
 
-            <div class="event-buttons">
-                <button class="event-read-more">Läs mer</button>
-                <button class="buy-ticket">Köp biljett</button>
-            </div>
-        </div> <?php endif; ?>
+            <div class="event-card-wrapper">
+                <div class="event-card">
+                    <div class="event-date">
+                        <p><?php if (get_field('date')) : ?>
+                                <p><?php the_field('date'); ?></p>
+                            <?php endif; ?>
+                            <?php if (get_field('time')) : ?>
+                                <p><?php the_field('time'); ?></p>
+                            <?php endif; ?></p>
+                    </div>
+                    <div class="event-thumbnail">
+                        <?php if (has_post_thumbnail()) {
+                            the_post_thumbnail('medium', ['class' => 'thumbnail-image']);
+                        } ?>
+
+                    </div>
+                    <div class="event-short-info">
+                        <p>
+                            <?php foreach ($eventTypes as $eventType) : ?>
+                                <a class="event-type" href="<?php echo get_term_link($eventType) ?>"><?php echo $eventType->name ?></a>
+                            <?php endforeach; ?>
+                        </p>
+                        <h1 class="event-name"><?php the_title(); ?></h1>
+                    </div>
+                </div>
+                <div class="event-card-expanded">
+                    <p>
+                        <?php foreach ($eventTypes as $eventType) : ?>
+                            <a class="event-type" href="<?php echo get_term_link($eventType) ?>"><?php echo $eventType->name ?></a>
+                        <?php endforeach; ?>
+                    </p>
+                    <h1 class="event-name"><?php the_title(); ?></h1>
+                    <p><?php the_content() ?></p>
+                    <p>Välkomna!</p>
+                    <?php if (get_field('price')) : ?>
+                        <p><?php the_field('price'); ?>:- </p>
+                    <?php endif; ?>
+                    <?php if (get_field('price_special')) : ?>
+                        <p><?php the_field('price_special'); ?>:- </p>
+                    <?php endif; ?>
+                    <?php if (get_field('social_media')) : ?>
+                        <p><?php the_field('social_media'); ?></p>
+                    <?php endif; ?>
+                    <p>Livestream: </p>
+                    <p>youtube.com</p>
+                </div>
+
+                <div class="event-buttons">
+                    <button class="event-read-more">Läs mer</button>
+                    <button class="buy-ticket">Köp biljett</button>
+                </div>
+            <?php endforeach; ?>
+            </div> <?php endif; ?>
     </section>
     <section class="news-letter">
         <div class="news-letter-box">
