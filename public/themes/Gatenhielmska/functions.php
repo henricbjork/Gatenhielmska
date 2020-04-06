@@ -36,6 +36,18 @@ add_action('after_setup_theme', function () {
     // Register News custom post type. / Vigge
     require get_template_directory() . '/post-types/news.php';
 
+    // Register Tenants custom post type. / Vigge
+    require get_template_directory() . '/post-types/about.php';
+
+    // Register Management custom post type. / Vigge
+    require get_template_directory() . '/post-types/contact.php';
+
+    // Registration of event field group
+    require get_template_directory() . '/fields/contact.php';
+
+    // Registration of event field group
+    require get_template_directory() . '/fields/about.php';
+
     // Registration of event field group
     require get_template_directory() . '/fields/event.php';
 
