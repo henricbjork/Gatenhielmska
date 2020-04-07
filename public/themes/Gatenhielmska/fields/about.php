@@ -9,7 +9,7 @@ if (function_exists('acf_add_local_field_group')) :
             array(
                 'key' => 'field_5e8af493cba2a',
                 'label' => 'Image',
-                'name' => 'Image',
+                'name' => 'image',
                 'type' => 'image',
                 'instructions' => 'Upload image',
                 'required' => 1,
@@ -19,7 +19,7 @@ if (function_exists('acf_add_local_field_group')) :
                     'class' => '',
                     'id' => '',
                 ),
-                'return_format' => 'id',
+                'return_format' => 'ID',
                 'preview_size' => 'medium',
                 'library' => 'all',
                 'min_width' => '',
