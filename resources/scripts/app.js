@@ -9,10 +9,12 @@ if (eventCards != null) {
     const expandedEvent = eventCard.querySelector(".event-card-expanded");
     const eventThumbnail = eventCard.querySelector(".thumbnail-image");
     const eventShortInfo = eventCard.querySelector(".event-short-info");
+    const eventDate = eventCard.querySelector(".event-date");
     eventReadMoreBtn.addEventListener("click", e => {
       expandedEvent.classList.toggle("expand");
       eventThumbnail.classList.toggle("image-appear");
       eventShortInfo.classList.toggle("hide");
+      eventDate.classList.toggle("event-date-expanded");
     });
   });
 }

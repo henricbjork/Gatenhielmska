@@ -14,12 +14,13 @@
                             <?php if (get_field('content')) : ?>
                                 <p class="news-card-paragraph"><?php the_field('content'); ?></p>
                             <?php endif ?>
+                            <a href="#">LÄS MER</a>
                         </div>
                     </div>
                 <?php endforeach; ?>
             <?php endif; ?>
         </div>
-        <button>Fler nyheter</button>
+        <a href="http://localhost:8000/nyheter/"><button>Fler nyheter</button></a>
     </div>
 </section>
 
