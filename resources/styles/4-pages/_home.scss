@@ -140,6 +140,7 @@
       font-family: $avenir;
       font-size: 16px;
       position: absolute;
+      transition: 0.1s;
     }
 
     .event-date-expanded {
@@ -196,6 +197,7 @@
     .event-card-expanded {
       height: 0;
       overflow: hidden;
+      transition: 0.1s;
 
       p {
         font-family: $avenir;
@@ -212,6 +214,10 @@
       }
       .event-prices {
         margin: 16px 0px 16px 0px;
+      }
+      a {
+        color: black;
+        font-family: $avenir;
       }
     }
 
