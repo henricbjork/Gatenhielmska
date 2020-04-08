@@ -45,6 +45,9 @@ add_action('after_setup_theme', function () {
     // Registration of event field group
     require get_template_directory() . '/fields/contact.php';
 
+    // Registration of contact-information field group
+    require get_template_directory() . '/fields/contact-information.php';
+
     // Registration of timeline field group
     require get_template_directory() . '/fields/timeline.php';
 

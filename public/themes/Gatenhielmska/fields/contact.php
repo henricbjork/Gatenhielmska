@@ -9,7 +9,7 @@ if (function_exists('acf_add_local_field_group')) :
             array(
                 'key' => 'field_5e8af87fd935a',
                 'label' => 'Image',
-                'name' => 'image',
+                'name' => 'image_management',
                 'type' => 'image',
                 'instructions' => 'Upload image',
                 'required' => 1,
@@ -101,7 +101,7 @@ if (function_exists('acf_add_local_field_group')) :
         'style' => 'default',
         'label_placement' => 'top',
         'instruction_placement' => 'label',
-        'hide_on_screen' => '',
+        'hide_on_screen' => ["the_content"],
         'active' => true,
         'description' => '',
     ));
