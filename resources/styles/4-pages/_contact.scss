@@ -1,0 +1,143 @@
+.contact-page{
+    background: $lightpink;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+
+    .contact-title{
+        font-family: EB Garamond;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 26px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin: 24px 0 24px 0;
+    }
+
+    .contact-information{
+        width: 327px;
+        height:auto;
+        padding:16px;
+        border-radius: 6px;
+        background: #ebc8bf;
+        position:relative;
+
+        h1{
+            font-family: Lato;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 14px;
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.04em;
+            color: $textgrey;
+            margin-bottom:12px;
+            text-transform:uppercase;
+        }
+        p{
+            font-family: Lato;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 140%;
+            margin-bottom:10px;
+        }
+
+    }
+
+    .management-container{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        text-align:center;
+
+        .management{
+            margin-bottom:24px;
+        }
+        .management-image{
+            height:243px;
+            width:243px;
+            margin-bottom:16px;
+        }
+
+        h1{
+            font-family: lato;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        p{
+            font-family:lato;
+            font-size:16px;
+            font-weight: normal;
+        }
+    }
+
+    .contact-form{
+        display: flex;
+        justify-content: center;
+        background: $lightpink;
+        min-height: 75vh;
+
+        .contact-form-container{
+            width: 327px;
+            height: 430px;
+            margin-top: 43px;
+            border-radius: 6px;
+            background: $pink;
+            padding: 16px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            h1 {
+                font-family: $minion;
+              }
+          
+              p {
+                margin: 24px 0px 16px 0px;
+                font-family: $avenir;
+                font-size: 14px;
+                line-height: 140%;
+              }
+          
+              form {
+                display: flex;
+                flex-direction: column;
+                font-family: $avenir;
+          
+                label {
+                  padding: 8px;
+                }
+          
+                input {
+                  width: 295px;
+                  height: 40px;
+                  border-radius: 6px;
+                  border: none;
+                }
+              }
+          
+              button {
+                position: absolute;
+                bottom: -17px;
+                left: 0;
+                right: 0;
+                margin-left: auto;
+                margin-right: auto;
+                width: 111px;
+                height: 38px;
+                background: $orange;
+                box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+                border-radius: 6px;
+                color: $white;
+                font-size: 14px;
+                border: none;
+                z-index: 5;
+              }
+        }
+    }
+}
