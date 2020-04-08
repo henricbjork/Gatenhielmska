@@ -12,6 +12,10 @@
     background: #ebc8bf;
     position:relative;
 
+    .hidden{
+        display:none;
+    }
+
     button{
             position: absolute;
             bottom: -17px;
@@ -32,22 +36,29 @@
     }
     
     .event-wrapper{
+        padding-top:20px;
+        padding-bottom:35px;
         height: 453px;
         overflow:hidden;
     }
 
     .events-timeline{
+        position:relative;
+        border-left: 1px solid black;
+        padding-left: 20px;
         margin-left:48px;
-        margin-top:24px;
-        margin-bottom:24px;
         width: 217px;
         display:flex;
         flex-direction: column;
+
         
         h1{
             font-size: 22px;
             font-family: $minion;
             margin-bottom:16px;
+        }
+        h1:first-child{
+            padding-top:16px;
         }
 
         p{
@@ -61,18 +72,45 @@
 
     }
 
-    .tenants{
+    .about-title{
+        font-family: EB Garamond;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 26px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin: 24px 0 24px 0;
+    }
 
-        .about-title{
-            font-family: EB Garamond;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 20px;
-            line-height: 26px;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            margin-top:24px;
+    .tenants{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+
+        .tenant{
+            text-align:center;
+            margin-bottom:24px;
+            
+            .tentants-image{
+                height:243px;
+                width:243px;
+                margin-bottom:16px;
+            }
+            h1{
+                font-family: lato;
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            p{
+                font-family:lato;
+                font-size:16px;
+                font-weight: normal;
+            }
+
+
         }
     }
 }

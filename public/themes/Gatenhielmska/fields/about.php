@@ -9,7 +9,7 @@ if (function_exists('acf_add_local_field_group')) :
             array(
                 'key' => 'field_5e8af493cba2a',
                 'label' => 'Image',
-                'name' => 'image',
+                'name' => 'image_tenant',
                 'type' => 'image',
                 'instructions' => 'Upload image',
                 'required' => 1,
