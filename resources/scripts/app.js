@@ -2,6 +2,18 @@ const menu = document.querySelector(".navigation-menu");
 const hamburger = document.querySelector(".menu-icon");
 const cross = document.querySelector(".cross-icon");
 const eventCards = document.querySelectorAll(".event-card-wrapper");
+const showGallery = document.querySelector(".gallery-header");
+
+if (showGallery != null) {
+  const gallery = document.querySelector(".gallery-images");
+  const shrinkBtn = document.querySelector(".shrink-btn");
+  showGallery.addEventListener("click", e => {
+    gallery.classList.add("show-gallery");
+  });
+  shrinkBtn.addEventListener("click", e => {
+    gallery.classList.remove("show-gallery");
+  });
+}
 
 if (eventCards != null) {
   eventCards.forEach(eventCard => {
