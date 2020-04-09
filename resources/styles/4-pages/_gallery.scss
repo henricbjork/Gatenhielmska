@@ -25,8 +25,8 @@
 
     img {
       position: absolute;
-      top: 6px;
-      right: 5px;
+      top: 8px;
+      right: 8px;
     }
   }
   .gallery-images {
@@ -35,6 +35,12 @@
     align-items: center;
     height: 0;
     overflow: hidden;
+    padding-top: 12px;
+
+    #sb_instagram .sb_instagram_header h3 {
+      font-family: $avenir;
+      text-transform: capitalize;
+    }
 
     .instagram-btn {
       width: 231px;
@@ -69,8 +75,8 @@
 
       .shrink-btn {
         position: absolute;
-        right: 10px;
-        top: 16px;
+        right: 15px;
+        top: 18px;
       }
     }
   }
@@ -97,7 +103,7 @@
 
   img {
     position: absolute;
-    top: 6px;
-    right: 5px;
+    top: 11px;
+    right: 8px;
   }
 }
