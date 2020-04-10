@@ -25,13 +25,11 @@
         </nav>
 
         <?php if ($pagename === 'om-huset' || $pagename === 'galleri' || $pagename === '') : ?>
-
             <section class="banner">
                 <img class="banner-image" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/bannerimage.png" />
                 <img class="logo" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/logoblack.svg" />
                 <h1>GATENHIELMSKA</h1>
             </section>
-
         <?php endif; ?>
 
 
