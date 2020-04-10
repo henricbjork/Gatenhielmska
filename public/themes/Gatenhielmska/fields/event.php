@@ -159,10 +159,10 @@ if (function_exists('acf_add_local_field_group')) :
             ),
             array(
                 'key' => 'field_5e8afd0dd8edc',
-                'label' => '',
-                'name' => '',
-                'type' => 'text',
-                'instructions' => '',
+                'label' => 'Tickets',
+                'name' => 'tickets',
+                'type' => 'url',
+                'instructions' => 'Write the link to tickets at biletto',
                 'required' => 0,
                 'conditional_logic' => 0,
                 'wrapper' => array(
@@ -191,7 +191,7 @@ if (function_exists('acf_add_local_field_group')) :
         'style' => 'default',
         'label_placement' => 'top',
         'instruction_placement' => 'label',
-        'hide_on_screen' => '',
+        'hide_on_screen' => ["the_content"],
         'active' => true,
         'description' => '',
     ));

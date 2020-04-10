@@ -9,7 +9,9 @@
             <?php if (have_rows('slides')) : ?>
                 <?php while (have_rows('slides')) : the_row(); ?>
                     <div class="events-timeline">
-                        <h1><?php the_sub_field('year'); ?></h1>
+                        <div class="year"><span></span>
+                            <h1><?php the_sub_field('year'); ?></h1>
+                        </div>
                         <p><?php the_sub_field('content'); ?></p>
                     </div>
 

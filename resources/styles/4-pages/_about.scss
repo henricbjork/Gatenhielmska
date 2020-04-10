@@ -12,6 +12,16 @@
     background: #ebc8bf;
     position:relative;
 
+    span::before{
+        content:"-";
+        font-size:27px;
+        position:absolute;
+        left:-5px;
+        top:-1px;
+        
+
+    }
+
     .hidden{
         display:none;
     }
@@ -65,6 +75,7 @@
             font-size: 14px;
             font-family: $avenir;
             line-height: 140%;
+            margin-bottom:16px;
         }
         
     }
