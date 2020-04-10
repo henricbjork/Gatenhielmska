@@ -58,4 +58,11 @@ footer {
       }
     }
   }
+
+  .partners {
+    display: flex;
+    justify-content: space-evenly;
+    background: $bluegreen;
+    padding: 39px 0px 24px 0px;
+  }
 }
