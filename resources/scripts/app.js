@@ -22,11 +22,30 @@ if (eventCards != null) {
     const eventThumbnail = eventCard.querySelector(".thumbnail-image");
     const eventShortInfo = eventCard.querySelector(".event-short-info");
     const eventDate = eventCard.querySelector(".event-date");
+    const parent = eventReadMoreBtn.parentNode;
+    console.log(parent);
+
+    const eventReadLessBtn = document.createElement("img");
+    eventReadLessBtn.src =
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSvXFyoZtK_VRlR4KjDwosRN_ZB_ZouuvxCe-g7uhABpOqUrEE6&usqp=CAU";
+    eventReadLessBtn.style.width = "20px";
+    eventReadLessBtn.style.height = "20px";
+
     eventReadMoreBtn.addEventListener("click", e => {
-      expandedEvent.classList.toggle("expand");
-      eventThumbnail.classList.toggle("image-appear");
-      eventShortInfo.classList.toggle("hide");
-      eventDate.classList.toggle("event-date-expanded");
+      parent.replaceChild(eventReadLessBtn, eventReadMoreBtn);
+
+      expandedEvent.classList.add("expand");
+      eventThumbnail.classList.add("image-appear");
+      eventShortInfo.classList.add("hide");
+      eventDate.classList.add("event-date-expanded");
+    });
+
+    eventReadLessBtn.addEventListener("click", e => {
+      expandedEvent.classList.remove("expand");
+      eventThumbnail.classList.remove("image-appear");
+      eventShortInfo.classList.remove("hide");
+      eventDate.classList.remove("event-date-expanded");
+      parent.replaceChild(eventReadMoreBtn, eventReadLessBtn);
     });
   });
 }
