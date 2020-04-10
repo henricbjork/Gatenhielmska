@@ -1,9 +1,17 @@
 .calender-main {
   background: $pink;
 
+  .calender-page-name {
+    padding: 24px 0px 16px 0px;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-family: $minion;
+  }
+
   .calender-forms {
     width: 327px;
-    margin: 18px auto;
+    margin: 0 auto 24px auto;
 
     .tour-button {
       position: relative;
@@ -84,6 +92,9 @@
       height: 346px;
       padding: 16px 16px 0px 16px;
       overflow: visible;
+    }
+    .tour-button-change {
+      border-radius: 6px 6px 0px 0px;
     }
   }
 
@@ -205,5 +216,15 @@
     text-transform: uppercase;
     font-size: 12px;
     padding-left: 16px;
+  }
+  .past-events-container {
+    display: flex;
+    justify-content: center;
+    margin: 32px 0px 100px 0px;
+
+    .past-events-link {
+      font-family: $avenir;
+      color: #000;
+    }
   }
 }

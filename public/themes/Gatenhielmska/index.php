@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 <section class="calender-main">
+    <div class="calender-page-name"><?php echo $pagename ?></div>
     <div class="calender-forms">
         <button class="tour-button"><img src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/cross.svg" alt=""> GUIDAD TUR</button>
         <div class="tour-form">
@@ -117,5 +118,8 @@
                 <?php endforeach; ?>
             <?php endif; ?>
             </section>
+            <div class="past-events-container">
+                <a href="#" class="past-events-link">SE TIDIGARE EVENEMANG</a>
+            </div>
     </section>
     <?php get_footer();

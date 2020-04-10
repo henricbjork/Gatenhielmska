@@ -55,6 +55,7 @@ if (eventCards != null) {
 if (tourButton != null) {
   tourButton.addEventListener("click", e => {
     tourForm.classList.toggle("show-tour");
+    tourButton.classList.toggle("tour-button-change");
   });
 }
 
