@@ -1,0 +1,203 @@
+.calender-main {
+  background: $pink;
+
+  .calender-forms {
+    width: 327px;
+    margin: 0 auto;
+
+    .tour-button {
+      position: relative;
+      width: 100%;
+      height: 32px;
+      background: $bluegreen;
+      border: none;
+      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+      border-radius: 6px;
+      font-family: $avenir;
+      font-size: 12px;
+      text-align: center;
+      letter-spacing: 0.04em;
+      color: $white;
+
+      img {
+        position: absolute;
+        top: 7px;
+        left: 7px;
+      }
+    }
+
+    .tour-form {
+      width: 327px;
+      height: 346px;
+      border-radius: 6px;
+      padding: 16px 16px 0px 16px;
+      font-family: $avenir;
+      font-size: 14px;
+      position: relative;
+
+      p {
+        width: 295px;
+        height: 50px;
+        line-height: 20px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        margin: 24px 0px 24px 0px;
+
+        input {
+          width: 295px;
+          height: 40px;
+          background: $white;
+          border-radius: 6px;
+          border: none;
+          margin: 8px 0px 8px 0px;
+        }
+      }
+
+      button {
+        position: absolute;
+        width: 135px;
+        height: 40px;
+        bottom: -17px;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        background: $orange;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+        border-radius: 6px;
+        border: none;
+        font-family: $avenir;
+        font-size: 14px;
+        color: $white;
+      }
+    }
+
+    .tour-form,
+    .filter-content {
+      background: $lightpink;
+    }
+  }
+
+  .filter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: -webkit-fill-available;
+  }
+  .news-filter {
+    width: 327px;
+    height: 32px;
+    background: $bluegreen;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    margin-top: 24px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    z-index: 1;
+  }
+
+  .news-filter-borders {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .filter-content.toggle-filter {
+    height: 395px;
+    transition: height 0.1s ease-out;
+    opacity: 1;
+  }
+
+  .filter-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    height: 0;
+    opacity: 0;
+    width: 327px;
+    border-right: 1px solid lightgrey;
+    border-left: 1px solid lightgrey;
+
+    .checkboxes {
+      display: flex;
+      align-items: center;
+      margin: 24px 16px 0px 16px;
+
+      .checkbox {
+        position: absolute;
+        opacity: 0;
+        z-index: 2;
+        height: 24px;
+        width: 24px;
+        border-radius: 6px;
+
+        & + label {
+          position: relative;
+          cursor: pointer;
+          padding: 0;
+        }
+        & + label:before {
+          content: "";
+          margin-right: 16px;
+          display: inline-block;
+          vertical-align: middle;
+          width: 24px;
+          height: 24px;
+          background: white;
+          border-radius: 6px;
+        }
+        &:hover + label:before {
+          background: $orange;
+        }
+        &:focus + label:before {
+          box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+        }
+        &:checked + label:before {
+          background: $orange;
+        }
+        &:checked + label:after {
+          content: "";
+          position: absolute;
+          left: 7px;
+          top: 11px;
+          background: white;
+          width: 2px;
+          height: 2px;
+          box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white,
+            4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+          transform: rotate(45deg);
+        }
+      }
+
+      .checkbox-label {
+        font-family: Lato;
+        text-transform: uppercase;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .filter-search-field {
+    width: 295px;
+    height: 26px;
+    border: none;
+    border-radius: 6px;
+    margin: 24px 16px;
+    background: white;
+    font-family: Lato;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding-left: 16px;
+  }
+}
