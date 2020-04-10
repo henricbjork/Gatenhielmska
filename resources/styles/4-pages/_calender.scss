@@ -3,7 +3,7 @@
 
   .calender-forms {
     width: 327px;
-    margin: 0 auto;
+    margin: 18px auto;
 
     .tour-button {
       position: relative;
@@ -28,12 +28,12 @@
 
     .tour-form {
       width: 327px;
-      height: 346px;
-      border-radius: 6px;
-      padding: 16px 16px 0px 16px;
+      border-radius: 0px 0px 6px 6px;
       font-family: $avenir;
       font-size: 14px;
       position: relative;
+      height: 0;
+      overflow: hidden;
 
       p {
         width: 295px;
@@ -78,6 +78,12 @@
     .tour-form,
     .filter-content {
       background: $lightpink;
+    }
+
+    .show-tour {
+      height: 346px;
+      padding: 16px 16px 0px 16px;
+      overflow: visible;
     }
   }
 
