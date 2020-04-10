@@ -3,6 +3,8 @@ const hamburger = document.querySelector(".menu-icon");
 const cross = document.querySelector(".cross-icon");
 const eventCards = document.querySelectorAll(".event-card-wrapper");
 const showGallery = document.querySelector(".gallery-header");
+const tourButton = document.querySelector(".tour-button");
+const tourForm = document.querySelector(".tour-form");
 
 if (showGallery != null) {
   const gallery = document.querySelector(".gallery-images");
@@ -47,6 +49,12 @@ if (eventCards != null) {
       eventDate.classList.remove("event-date-expanded");
       parent.replaceChild(eventReadMoreBtn, eventReadLessBtn);
     });
+  });
+}
+
+if (tourButton != null) {
+  tourButton.addEventListener("click", e => {
+    tourForm.classList.toggle("show-tour");
   });
 }
 
