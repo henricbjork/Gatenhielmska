@@ -25,7 +25,6 @@ if (eventCards != null) {
     const eventShortInfo = eventCard.querySelector(".event-short-info");
     const eventDate = eventCard.querySelector(".event-date");
     const parent = eventReadMoreBtn.parentNode;
-    console.log(parent);
 
     const eventReadLessBtn = document.createElement("img");
     eventReadLessBtn.src =

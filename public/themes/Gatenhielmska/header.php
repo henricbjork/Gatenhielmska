@@ -11,7 +11,6 @@
 
 <body <?php body_class(); ?>>
     <header>
-
         <div class="nav-bar">
             <img class="menu-icon" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/menu.svg" />
             <a href="http://localhost:8000/hem"><img class="logo" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/logowhite.svg" /></a>
@@ -28,6 +27,12 @@
             <?php wp_nav_menu(['theme_location' => 'navigation']); ?>
         </nav>
 
+        
+
+        <?php if ($pagename === 'om-huset' || $pagename === 'galleri') : ?>
+            <p class="page-title"><?php the_title() ?></p>
+        <?php endif; ?>
+
         <?php if ($pagename === 'om-huset' || $pagename === 'galleri' || $pagename === '') : ?>
             <section class="banner">
                 <img class="banner-image" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/bannerimage.png" />
@@ -35,6 +40,4 @@
                 <h1>GATENHIELMSKA</h1>
             </section>
         <?php endif; ?>
-
-
     </header>
