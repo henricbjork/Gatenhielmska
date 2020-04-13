@@ -18,15 +18,13 @@
         position:absolute;
         left:-5px;
         top:-1px;
-        
-
     }
 
     .hidden{
         display:none;
     }
 
-    button{
+    .about-button-history{
             position: absolute;
             bottom: -17px;
             left: 0;
@@ -42,7 +40,17 @@
             font-size: 14px;
             border: none;
             z-index: 5;
-          
+    }
+
+    .read-less{
+        text-align: center;
+        margin-bottom:16px;
+    }
+    .about-read-less-button{
+        font-size:100%;
+        border:0;
+        padding:0;
+        background:none;
     }
     
     .event-wrapper{
@@ -50,6 +58,10 @@
         padding-bottom:35px;
         height: 453px;
         overflow:hidden;
+    }
+
+    .visible{
+        height:auto;
     }
 
     .events-timeline{
@@ -120,8 +132,6 @@
                 font-size:16px;
                 font-weight: normal;
             }
-
-
         }
     }
 }

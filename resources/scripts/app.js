@@ -98,3 +98,21 @@ if (filterNewsButton != null) {
     filterNewsButton.classList.toggle("news-filter-borders");
   });
 }
+
+// Timeline
+
+const eventWrapper = document.querySelector(".event-wrapper");
+const aboutButtonHistory = document.querySelector(".about-button-history");
+const aboutReadLessButton = document.querySelector(".about-read-less-button");
+
+aboutButtonHistory.addEventListener("click", () => {
+  aboutButtonHistory.classList.add("hidden");
+  aboutReadLessButton.classList.remove("hidden");
+  eventWrapper.classList.add("visible");
+  aboutReadLessButton.addEventListener("click", () => {
+    aboutButtonHistory.classList.remove("hidden");
+    aboutReadLessButton.classList.add("hidden");
+    eventWrapper.classList.remove("visible");
+    window.scrollTo(pageXOffset, 400);
+  });
+});
