@@ -3,17 +3,26 @@ const hamburger = document.querySelector(".menu-icon");
 const cross = document.querySelector(".cross-icon");
 const eventCards = document.querySelectorAll(".event-card-wrapper");
 const showGallery = document.querySelector(".gallery-header");
+const showVideos = document.querySelector(".video-header");
 const tourButton = document.querySelector(".tour-button");
 const tourForm = document.querySelector(".tour-form");
 
 if (showGallery != null) {
   const gallery = document.querySelector(".gallery-images");
+  const videos = document.querySelector(".gallery-videos");
   const shrinkBtn = document.querySelector(".shrink-btn");
+  const videoShrinkBtn = document.querySelector(".video-shrink-btn");
   showGallery.addEventListener("click", e => {
     gallery.classList.add("show-gallery");
   });
   shrinkBtn.addEventListener("click", e => {
     gallery.classList.remove("show-gallery");
+  });
+  showVideos.addEventListener("click", e => {
+    videos.classList.add("show-videos");
+  });
+  videoShrinkBtn.addEventListener("click", e => {
+    videos.classList.remove("show-videos");
   });
 }
 
