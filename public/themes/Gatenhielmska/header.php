@@ -16,6 +16,10 @@
             <a href="http://localhost:8000/hem"><img class="logo" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/logowhite.svg" /></a>
             <img class="search-icon" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/search.svg" />
         </div>
+        <div class="search-form hidden">
+            <?php get_search_form(); ?>
+        </div>
+
 
         <nav role="navigation" class="navigation-menu">
             <img class="cross-icon" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/cross.svg" />
