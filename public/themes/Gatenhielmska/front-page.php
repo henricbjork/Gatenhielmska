@@ -47,12 +47,12 @@ else : ?>
             <div class="event-card-wrapper">
                 <div class="event-card">
                     <div class="event-date">
-                        <p><?php if (get_field('date')) : ?>
-                                <p><?php the_field('date'); ?></p>
-                            <?php endif; ?>
-                            <?php if (get_field('time')) : ?>
-                                <p><?php the_field('time'); ?></p>
-                            <?php endif; ?></p>
+                        <?php if (get_field('date')) : ?>
+                            <h1><?php the_field('date'); ?></h1>
+                        <?php endif; ?>
+                        <?php if (get_field('time')) : ?>
+                            <p><?php the_field('time'); ?></p>
+                        <?php endif; ?></p>
                     </div>
                     <div class="event-thumbnail">
                         <?php
