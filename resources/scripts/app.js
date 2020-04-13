@@ -1,10 +1,16 @@
 const menu = document.querySelector(".navigation-menu");
 const hamburger = document.querySelector(".menu-icon");
 const cross = document.querySelector(".cross-icon");
+const searchForm = document.querySelector(".search-form");
+const searchIcon = document.querySelector(".search-icon");
 const eventCards = document.querySelectorAll(".event-card-wrapper");
 const showGallery = document.querySelector(".gallery-header");
 const tourButton = document.querySelector(".tour-button");
 const tourForm = document.querySelector(".tour-form");
+
+searchIcon.addEventListener("click", () => {
+  searchForm.classList.toggle("hidden");
+});
 
 if (showGallery != null) {
   const gallery = document.querySelector(".gallery-images");
