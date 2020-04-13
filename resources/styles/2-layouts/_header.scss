@@ -61,11 +61,50 @@
         line-height: 31px;
         text-align: center;
         letter-spacing: 0.04em;
+        text-transform: uppercase;
         a {
           text-decoration: none;
           color: $white;
         }
       }
     }
+  }
+}
+
+.page-title {
+  text-align: center;
+  font-family: $minion;
+  background: $lightpink;
+  font-size: 20px;
+  text-transform: capitalize;
+  padding: 24px;
+}
+
+.banner {
+  background: $lightpink;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .banner-image {
+    width: 375px;
+    height: 256px;
+  }
+  .logo {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 10px;
+  }
+  h1 {
+    font-family: $minion;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: $dark;
+    margin-bottom: 50px;
   }
 }
