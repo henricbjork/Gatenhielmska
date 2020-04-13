@@ -1,20 +1,32 @@
 <?php get_header(); ?>
 
-<main role="main">
-    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-            <article>
-                <header>
-                    <h1><?php the_title(); ?></h1>
-                </header>
+<section class="search-page">
 
-                <?php the_content(); ?>
-            </article>
-        <?php endwhile;
-    else : ?>
-        <article>
-            <p>Nothing to see.</p>
-        </article>
-    <?php endif; ?>
-</main>
+    <?php
+    $s = get_search_query();
+    $args = array(
+        's' => $s
+    );
+    // The Query
+    $the_query = new WP_Query($args);
+    if ($the_query->have_posts()) {
+        _e("<h1>Resultat av sökning: " . get_query_var('s') . "</h1>");
+        while ($the_query->have_posts()) {
+            $the_query->the_post();
+    ?>
+            <li>
+                <a href="<?php wp_redirect(the_permalink()); ?>"><?php the_title(); ?></a>
+            </li>
+        <?php
+        }
+    } else {
+        ?>
+        <h1>Här var det tomt!</h1>
+        <div class="alert alert-info">
+            <p>Tyvärr, vi hittade ingenting som matchar din sökning.</p>
+        </div>
+    <?php } ?>
+</section>
 
-<?php get_footer();
+
+<?php get_footer(); ?>
