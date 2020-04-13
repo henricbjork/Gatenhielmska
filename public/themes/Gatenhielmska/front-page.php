@@ -102,6 +102,7 @@ else : ?>
 
             </div>
         <?php endforeach; ?>
+        <a href="/kalender"><button class="all-events-btn">Alla Evenmang</button></a>
     <?php endif; ?>
     </section>
     <section class="news-letter">
