@@ -35,7 +35,7 @@ else : ?>
     </article>
 <?php endif; ?>
 
-<?php $events = get_posts(['post_type' => 'events']); ?>
+<?php $events = get_posts(['post_type' => 'events', 'numberposts' => 3]); ?>
 
 <?php if (count($events)) : ?>
     <h2 class="event-header">Evenemang & Utställningar</h2>
