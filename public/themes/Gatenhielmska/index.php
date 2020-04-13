@@ -2,7 +2,7 @@
 <section class="calender-main">
     <div class="calender-page-name"><?php echo $pagename ?></div>
     <div class="calender-forms">
-        <button class="tour-button"><img src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/cross.svg" alt=""> GUIDAD TUR</button>
+        <button class="tour-button">GUIDAD TUR</button>
         <div class="tour-form">
             <p>Är du intresserad av att boka en guidad tur i våra lokaler? Fyll i dina kontaktuppgifter nedan så återkommer vi med lediga tider inom kort.</p>
             <form>
@@ -122,4 +122,5 @@
                 <a href="#" class="past-events-link">SE TIDIGARE EVENEMANG</a>
             </div>
     </section>
-    <?php get_footer();
+
+    <?php get_footer(); ?>

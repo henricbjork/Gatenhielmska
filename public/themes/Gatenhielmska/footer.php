@@ -1,8 +1,15 @@
   <?php wp_footer(); ?>
-  <div class="footer-top">
-    <img class="footer-image" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/wave.svg" />
-    <img class="footer-bird" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/bird.svg" />
-  </div>
+  <?php if ($pagename === 'kalender') : ?>
+    <div class="footer-top" style="background: #ebc8bf;">
+      <img class="footer-image" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/wave.svg" />
+      <img class="footer-bird" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/bird.svg" />
+    </div>
+  <?php else : ?>
+    <div class="footer-top">
+      <img class="footer-image" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/wave.svg" />
+      <img class="footer-bird" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/bird.svg" />
+    </div>
+  <?php endif; ?>
   <footer>
     <div class="contact-info">
       <h1>Kontakta oss!</h1>
@@ -23,7 +30,6 @@
       <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/higab-logo.svg" alt="">
     </div>
   </footer>
-
   </body>
 
   </html>
