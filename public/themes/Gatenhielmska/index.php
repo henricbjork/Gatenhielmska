@@ -94,6 +94,8 @@
                             <div class="event-prices">
                                 <?php if (get_field('regular_price')) : ?>
                                     <p>Entré: <?php the_field('regular_price'); ?>:- </p>
+                                <?php else : ?>
+                                    <p>Entré: Fri entré</p>
                                 <?php endif; ?>
                                 <?php if (get_field('special_price')) : ?>
                                     <p>Student/Pensionär: <?php the_field('special_price'); ?>:- </p>
@@ -111,7 +113,11 @@
 
                         <div class="event-buttons">
                             <button class="event-read-more">Läs mer</button>
-                            <button class="buy-ticket">Köp biljett</button>
+                            <?php if (get_field('regular_price') === '' || get_field('regular_price') === '0') :  ?>
+                                <button data-status="disabled" class="buy-ticket">Fri entré</button>
+                            <?php else : ?>
+                                <button data-status="enabled" class="buy-ticket">Köp biljett</button>
+                            <?php endif; ?>
                         </div>
 
                     </div>

@@ -32,7 +32,13 @@ document.addEventListener("DOMContentLoaded", function() {
       const eventThumbnail = eventCard.querySelector(".thumbnail-image");
       const eventShortInfo = eventCard.querySelector(".event-short-info");
       const eventDate = eventCard.querySelector(".event-date");
+      const buyButton = eventCard.querySelector(".buy-ticket");
       const parent = eventReadMoreBtn.parentNode;
+
+      if (buyButton.dataset.status === "disabled") {
+        buyButton.style.background = "#EBC8BF";
+        buyButton.disabled = true;
+      }
 
       const eventReadLessBtn = document.createElement("button");
       eventReadLessBtn.innerHTML = "Läs mindre";
