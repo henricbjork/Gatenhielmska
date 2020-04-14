@@ -18,7 +18,7 @@
 
     .news-prompt {
       color: #555555;
-      font-family: $avenir;
+      font-family: $sans-serif;
       text-transform: uppercase;
       font-style: normal;
       font-size: 12px;
@@ -35,16 +35,16 @@
       .news-card-text {
         h1 {
           font-size: 22px;
-          font-family: $minion;
+          font-family: $serif;
         }
         p {
           font-size: 14px;
-          font-family: $avenir;
+          font-family: $sans-serif;
           line-height: 140%;
           padding: 16px 0px 20px 0px;
         }
         a {
-          font-family: $avenir;
+          font-family: $sans-serif;
           font-size: 12px;
           letter-spacing: 0.04em;
           color: #000;
@@ -73,7 +73,7 @@
 .event-header {
   background: $pink;
   text-align: center;
-  font-family: $minion;
+  font-family: $serif;
   font-size: 20px;
   padding: 16px;
 }
@@ -111,13 +111,13 @@
       justify-content: center;
       align-items: center;
       color: $white;
-      font-family: $avenir;
+      font-family: $sans-serif;
       font-size: 16px;
       position: absolute;
       transition: 0.1s;
 
       h1 {
-        font-family: $minion;
+        font-family: $serif;
         font-size: 20px;
       }
     }
@@ -136,7 +136,7 @@
     }
 
     .event-type {
-      font-family: $avenir;
+      font-family: $sans-serif;
       font-size: 12px;
       letter-spacing: 0.04em;
       color: $textgrey;
@@ -145,7 +145,7 @@
     }
 
     .event-name {
-      font-family: $minion;
+      font-family: $serif;
       font-size: 22px;
       color: #000000;
     }
@@ -179,7 +179,7 @@
       transition: 0.1s;
 
       p {
-        font-family: $avenir;
+        font-family: $sans-serif;
         font-size: 14px;
       }
 
@@ -196,7 +196,7 @@
       }
       a {
         color: black;
-        font-family: $avenir;
+        font-family: $sans-serif;
       }
     }
 
@@ -223,7 +223,7 @@
         background: $orange;
         box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.25);
         border-radius: 6px 0px 0px 0px;
-        font-family: $avenir;
+        font-family: $sans-serif;
         font-size: 12px;
         color: $white;
         border: none;
@@ -266,12 +266,12 @@
     flex-direction: column;
 
     h1 {
-      font-family: $minion;
+      font-family: $serif;
     }
 
     p {
       margin: 24px 0px 16px 0px;
-      font-family: $avenir;
+      font-family: $sans-serif;
       font-size: 14px;
       line-height: 140%;
     }
@@ -279,7 +279,7 @@
     form {
       display: flex;
       flex-direction: column;
-      font-family: $avenir;
+      font-family: $sans-serif;
 
       label {
         padding: 8px 8px 8px 0;
