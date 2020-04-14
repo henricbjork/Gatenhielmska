@@ -114,7 +114,7 @@
                         <div class="event-buttons">
                             <button class="event-read-more">Läs mer</button>
                             <?php if (get_field('regular_price') === '' || get_field('regular_price') === '0') :  ?>
-                                <button data-status="disabled" class="buy-ticket">Fri entré</button>
+                                <button data-status="disabled" class="buy-ticket">Fri Entré!</button>
                             <?php else : ?>
                                 <button data-status="enabled" class="buy-ticket">Köp biljett</button>
                             <?php endif; ?>
