@@ -59,9 +59,9 @@
             <h1>Vill du bli en av oss?</h1>
             <p>Vi söker ständigt volontärer att arbeta på våra olika evenemang. Brinner du för konst och kultur? skicka då in en spontanansökan så kanske vi hör av oss!</p>
             <form>
-                <label for="name">För- och efternamn</label>
+                <label for="name">För- och efternamn:</label>
                 <input type="text" name="name" id="name">
-                <label for="email">E-post</label>
+                <label for="email">E-post:</label>
                 <input type="email" name="email" id="email">
                 <label for="phone">Telefonnummer:</label>
                 <input type="phone" name="phone" id="phone">

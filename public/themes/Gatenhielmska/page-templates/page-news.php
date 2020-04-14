@@ -59,6 +59,10 @@
                 <div class="news-card-text">
                     <h1 class="news-card-header"><?php the_title(); ?></h1>
 
+                    <?php if (get_field('date_news')) : ?>
+                        <p class="news-card-date"><?php the_field('date_news'); ?></p>
+                    <?php endif ?>
+
                     <?php if (get_field('content')) : ?>
                         <p class="news-card-paragraph"><?php the_field('content'); ?></p>
                     <?php endif ?>
