@@ -9,13 +9,13 @@
             <h1>Boka Gathenhielmska</h1>
             <p>Önskar du att genomföra en Konsert, Workshop, kurs eller något annat i någon av våra lokaler? Vänligen fyll i formuläret nedan så återkommer vi.</p>
             <form>
-                <label for="name">För- och efternamn</label>
+                <label for="name">För- och efternamn:</label>
                 <input type="text" name="name" id="name">
-                <label for="email">E-post</label>
+                <label for="email">E-post:</label>
                 <input type="email" name="email" id="email">
                 <label for="phone">Telefonnummer:</label>
                 <input type="phone" name="phone" id="phone">
-                <label for="information">Information om önskat evenemang</label>
+                <label for="information">Information om önskat evenemang:</label>
                 <textarea name="information" id="information"></textarea>
             </form>
             <button>Skicka</button>

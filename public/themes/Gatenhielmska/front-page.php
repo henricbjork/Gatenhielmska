@@ -11,6 +11,9 @@
                     <div class="news-card-start">
                         <div class="news-card-text">
                             <h1 class="news-card-header"><?php the_title(); ?></h1>
+                            <?php if (get_field('date_news')) : ?>
+                                <p class="news-card-date"><?php the_field('date_news'); ?></p>
+                            <?php endif ?>
                             <?php if (get_field('content')) : ?>
                                 <p class="news-card-paragraph"><?php the_field('content'); ?></p>
                             <?php endif ?>
@@ -110,9 +113,9 @@ else : ?>
             <h1>Nyhetsbrev</h1>
             <p>Vill du få information om Gathenhielmska rakt in i din brevlåda? Skriv då in din mailadress här nedan så hörs vi på mailen!</p>
             <form>
-                <label for="name">För- och efternamn</label>
+                <label for="name">För- och efternamn:</label>
                 <input type="text" name="name" id="name">
-                <label for="email">E-post</label>
+                <label for="email">E-post:</label>
                 <input type="email" name="email" id="email">
             </form>
             <button>Skicka</button>
