@@ -1,5 +1,4 @@
 .gallery-container {
-  background: $lightpink;
   padding: 40px 24px 80px 24px;
 
   a {
@@ -30,12 +29,16 @@
     }
   }
   .gallery-images {
+    background: $lightpink;
+    border-left: 2px solid $pink;
+    border-right: 2px solid $pink;
+    border-radius: 0px 0px 6px 6px;
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 0;
     overflow: hidden;
-    padding-top: 12px;
+    transition: 0.3s ease-out;
 
     #sb_instagram .sb_instagram_header h3 {
       font-family: $sans-serif;
@@ -77,6 +80,7 @@
   }
   .show-gallery {
     height: auto;
+    padding-top: 12px;
   }
 }
 .video-header {
