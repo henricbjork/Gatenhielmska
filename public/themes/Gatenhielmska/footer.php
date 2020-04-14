@@ -25,7 +25,7 @@
       </div>
     </div>
     <div class="partners">
-      <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/higab-logo.svg" alt="">
+      <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/sfr.svg" alt="">
       <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/gbgstad-logo.svg" alt="">
       <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/higab-logo.svg" alt="">
     </div>
