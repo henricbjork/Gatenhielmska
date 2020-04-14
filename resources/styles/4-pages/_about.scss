@@ -1,137 +1,133 @@
-.about-page{
-    background: $lightpink;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 20vh;
+.about-page {
+  background: $lightpink;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 20vh;
 
-    .timeline{
+  .timeline {
     width: 327px;
     margin: 24px 0 24px 0;
     border-radius: 6px;
     background: #ebc8bf;
-    position:relative;
+    position: relative;
 
-    span::before{
-        content:"-";
-        font-size:27px;
-        position:absolute;
-        left:-5px;
-        top:-1px;
+    span::before {
+      content: "-";
+      font-size: 27px;
+      position: absolute;
+      left: -5px;
+      top: -1px;
     }
 
-    .hidden{
-        display:none;
+    .hidden {
+      display: none;
     }
 
-    .about-button-history{
-            position: absolute;
-            bottom: -17px;
-            left: 0;
-            right: 0;
-            margin-left: auto;
-            margin-right: auto;
-            width: 111px;
-            height: 38px;
-            background: $orange;
-            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-            border-radius: 6px;
-            color: $white;
-            font-size: 14px;
-            border: none;
-            z-index: 5;
+    .about-button-history {
+      position: absolute;
+      bottom: -17px;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      width: 111px;
+      height: 38px;
+      background: $orange;
+      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+      border-radius: 6px;
+      color: $white;
+      font-size: 14px;
+      border: none;
+      z-index: 5;
     }
 
-    .read-less{
-        text-align: center;
-        margin-bottom:16px;
+    .read-less {
+      text-align: center;
+      margin-bottom: 16px;
     }
-    .about-read-less-button{
-        font-size:100%;
-        border:0;
-        padding:0;
-        background:none;
-    }
-    
-    .event-wrapper{
-        padding-top:20px;
-        padding-bottom:35px;
-        height: 453px;
-        overflow:hidden;
+    .about-read-less-button {
+      font-size: 100%;
+      border: 0;
+      padding: 0;
+      background: none;
     }
 
-    .visible{
-        height:auto;
+    .event-wrapper {
+      padding-top: 20px;
+      padding-bottom: 35px;
+      height: 453px;
+      overflow: hidden;
     }
 
-    .events-timeline{
-        position:relative;
-        border-left: 1px solid black;
-        padding-left: 20px;
-        margin-left:48px;
-        width: 217px;
-        display:flex;
-        flex-direction: column;
-
-        
-        h1{
-            font-size: 22px;
-            font-family: $minion;
-            margin-bottom:16px;
-        }
-        h1:first-child{
-            padding-top:16px;
-        }
-
-        p{
-            font-size: 14px;
-            font-family: $avenir;
-            line-height: 140%;
-            margin-bottom:16px;
-        }
-        
-    }
-    
-
+    .visible {
+      height: auto;
     }
 
-    .about-title{
-        font-family: EB Garamond;
-        font-style: normal;
+    .events-timeline {
+      position: relative;
+      border-left: 1px solid black;
+      padding-left: 20px;
+      margin-left: 48px;
+      width: 217px;
+      display: flex;
+      flex-direction: column;
+
+      h1 {
+        font-size: 22px;
+        font-family: $serif;
+        margin-bottom: 16px;
+      }
+      h1:first-child {
+        padding-top: 16px;
+      }
+
+      p {
+        font-size: 14px;
+        font-family: $sans-serif;
+        line-height: 140%;
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  .about-title {
+    font-family: EB Garamond;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 24px 0 24px 0;
+  }
+
+  .tenants {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .tenant {
+      text-align: center;
+      margin-bottom: 24px;
+
+      .tentants-image {
+        height: 243px;
+        width: 243px;
+        margin-bottom: 16px;
+      }
+      h1 {
+        font-family: lato;
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      p {
+        font-family: lato;
+        font-size: 16px;
         font-weight: normal;
-        font-size: 20px;
-        line-height: 26px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        margin: 24px 0 24px 0;
+      }
     }
-
-    .tenants{
-        display:flex;
-        flex-direction: column;
-        align-items: center;
-
-        .tenant{
-            text-align:center;
-            margin-bottom:24px;
-            
-            .tentants-image{
-                height:243px;
-                width:243px;
-                margin-bottom:16px;
-            }
-            h1{
-                font-family: lato;
-                font-size: 18px;
-                font-weight: bold;
-            }
-
-            p{
-                font-family:lato;
-                font-size:16px;
-                font-weight: normal;
-            }
-        }
-    }
+  }
 }

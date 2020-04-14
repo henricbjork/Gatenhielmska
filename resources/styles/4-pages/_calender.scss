@@ -6,7 +6,7 @@
     text-align: center;
     text-transform: capitalize;
     font-size: 20px;
-    font-family: $minion;
+    font-family: $serif;
   }
 
   .calender-forms {
@@ -20,7 +20,7 @@
       border: none;
       box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
       border-radius: 6px;
-      font-family: $avenir;
+      font-family: $sans-serif;
       font-size: 12px;
       text-align: center;
       letter-spacing: 0.04em;
@@ -30,7 +30,7 @@
     .tour-form {
       width: 327px;
       border-radius: 0px 0px 6px 6px;
-      font-family: $avenir;
+      font-family: $sans-serif;
       font-size: 14px;
       position: relative;
       height: 0;
@@ -70,7 +70,7 @@
         box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
         border-radius: 6px;
         border: none;
-        font-family: $avenir;
+        font-family: $sans-serif;
         font-size: 14px;
         color: $white;
       }
@@ -216,7 +216,7 @@
     margin: 32px 0px 100px 0px;
 
     .past-events-link {
-      font-family: $avenir;
+      font-family: $sans-serif;
       color: #000;
     }
   }

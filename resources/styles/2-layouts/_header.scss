@@ -19,34 +19,32 @@
     top: 16px;
     right: 20px;
   }
-
 }
 
-.hidden{
-  display:none;
-} 
+.hidden {
+  display: none;
+}
 
-
-.search-form{
+.search-form {
   background: #fde9e8;
 
-  .hidden{
-    display:none;
-  } 
-
-  #s{
-    width:250px;
-    height:26px;
-    border:none;
-    border-radius: 6px;
-    margin:24px 16px;
-    background:white;
-    font-family: Lato;
-    font-size:12px;
-    padding-left:16px;
+  .hidden {
+    display: none;
   }
 
-  #searchsubmit{
+  #s {
+    width: 250px;
+    height: 26px;
+    border: none;
+    border-radius: 6px;
+    margin: 24px 16px;
+    background: white;
+    font-family: Lato;
+    font-size: 12px;
+    padding-left: 16px;
+  }
+
+  #searchsubmit {
     margin-top: 16px;
     margin-left: auto;
     margin-right: auto;
@@ -59,8 +57,7 @@
     font-size: 14px;
     border: none;
   }
-
-  }
+}
 
 .navigation-menu {
   background: $bluegreen;
@@ -95,7 +92,7 @@
       li {
         margin: 30px;
         text-align: center;
-        font-family: $minion;
+        font-family: $serif;
         font-style: normal;
         font-weight: bold;
         font-size: 26px;
@@ -114,7 +111,7 @@
 
 .page-title {
   text-align: center;
-  font-family: $minion;
+  font-family: $serif;
   background: $lightpink;
   font-size: 20px;
   text-transform: capitalize;
@@ -138,7 +135,7 @@
     margin-bottom: 10px;
   }
   h1 {
-    font-family: $minion;
+    font-family: $serif;
     font-style: normal;
     font-weight: normal;
     font-size: 30px;
