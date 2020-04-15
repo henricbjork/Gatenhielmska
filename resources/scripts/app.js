@@ -17,11 +17,24 @@ document.addEventListener("DOMContentLoaded", function() {
   if (showGallery != null) {
     const gallery = document.querySelector(".gallery-images");
     const videos = document.querySelector(".gallery-videos");
+    const minimizeVideos = document.querySelector(".video-less-btn");
+    const minimizeImages = document.querySelector(".gallery-less-btn");
+
     showGallery.addEventListener("click", e => {
-      gallery.classList.toggle("show-gallery");
+      gallery.classList.add("show-gallery");
+      minimizeImages.classList.add("show-button");
+    });
+    minimizeImages.addEventListener("click", e => {
+      gallery.classList.remove("show-gallery");
+      minimizeImages.classList.remove("show-button");
     });
     showVideos.addEventListener("click", e => {
-      videos.classList.toggle("show-videos");
+      videos.classList.add("show-videos");
+      minimizeVideos.classList.add("show-button");
+    });
+    minimizeVideos.addEventListener("click", e => {
+      videos.classList.remove("show-videos");
+      minimizeVideos.classList.remove("show-button");
     });
   }
 
