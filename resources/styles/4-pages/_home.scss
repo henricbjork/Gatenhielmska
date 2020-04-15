@@ -250,7 +250,7 @@
       right: 0;
 
       .event-read-more {
-        @include button(124px, 32px, transparent, none, 14px, #000, none);
+        @include button(124px, 32px, transparent, none, 14px, black, none);
       }
 
       .buy-ticket {
