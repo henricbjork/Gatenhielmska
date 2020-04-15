@@ -75,7 +75,6 @@
 }
 
 .event-section-wrapper{
-
   @media only screen and (min-width: 1281px) {
    display:flex;
     justify-content:center; 
@@ -95,6 +94,16 @@ width: 375px;
   }
 }
 
+.all-events{
+  @media only screen and (min-width:1281px){
+  display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+  }
+}
+
 .events {
   display: flex;
   flex-direction: column;
@@ -110,6 +119,10 @@ width: 375px;
     border-radius: 6px;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
 
+  }
+
+  .space-event-page{
+    height:32px;
   }
 
   .event-card-wrapper {
