@@ -2,7 +2,7 @@
   background: $pink;
   @media only screen and (min-width: 1281px) {
     background: url("./../../images/backgroundmobile.png") center no-repeat;
-  background-size: cover;
+    background-size: cover;
   }
 
   .calender-page-name {
@@ -18,17 +18,16 @@
     margin: 0 auto 24px auto;
 
     .tour-button {
-      width: 100%;
-      height: 32px;
-      background: $bluegreen;
-      border: none;
-      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-      border-radius: 6px;
-      font-family: $sans-serif;
-      font-size: 12px;
+      @include button(
+        100%,
+        32px,
+        $bluegreen,
+        6px,
+        12px,
+        $white,
+        0px 2px 2px rgba(0, 0, 0, 0.25)
+      );
       text-align: center;
-      letter-spacing: 0.04em;
-      color: $white;
     }
 
     .tour-form {
@@ -62,21 +61,21 @@
       }
 
       button {
+        @include button(
+          135px,
+          40px,
+          $orange,
+          6px,
+          14px,
+          $white,
+          0px 2px 2px rgba(0, 0, 0, 0.25)
+        );
         position: absolute;
-        width: 135px;
-        height: 40px;
         bottom: -17px;
         left: 0;
         right: 0;
         margin-left: auto;
         margin-right: auto;
-        background: $orange;
-        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-        border-radius: 6px;
-        border: none;
-        font-family: $sans-serif;
-        font-size: 14px;
-        color: $white;
       }
     }
 
@@ -201,7 +200,6 @@
       }
     }
   }
-
   .filter-search-field {
     width: 295px;
     height: 26px;

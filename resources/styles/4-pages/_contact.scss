@@ -92,7 +92,7 @@
       display: flex;
       flex-direction: column;
       box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-      
+
       h1 {
         font-family: $serif;
       }
@@ -124,20 +124,21 @@
       }
 
       button {
+        @include button(
+          111px,
+          38px,
+          $orange,
+          6px,
+          14px,
+          $white,
+          0px 2px 2px rgba(0, 0, 0, 0.25)
+        );
         position: absolute;
         bottom: -17px;
         left: 0;
         right: 0;
         margin-left: auto;
         margin-right: auto;
-        width: 111px;
-        height: 38px;
-        background: $orange;
-        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-        border-radius: 6px;
-        color: $white;
-        font-size: 14px;
-        border: none;
         z-index: 5;
       }
     }
