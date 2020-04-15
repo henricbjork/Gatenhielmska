@@ -1,0 +1,14 @@
+// GLOBAL MIXINS
+
+@mixin button($width, $height, $bg, $radius, $fontSize, $color, $boxShadow) {
+  width: $width;
+  height: $height;
+  background: $bg;
+  border-radius: $radius;
+  border: none;
+  font-family: $sans-serif;
+  font-size: $fontSize;
+  letter-spacing: 0.04em;
+  color: $white;
+  box-shadow: $boxShadow;
+}
