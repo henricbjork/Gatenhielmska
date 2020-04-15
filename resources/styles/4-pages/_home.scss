@@ -56,33 +56,34 @@
       }
     }
     button {
+      @include button(
+        111px,
+        38px,
+        $orange,
+        6px,
+        14px,
+        $white,
+        0px 2px 2px rgba(0, 0, 0, 0.25)
+      );
       position: absolute;
       bottom: -17px;
       left: 0;
       right: 0;
       margin-left: auto;
       margin-right: auto;
-      width: 111px;
-      height: 38px;
-      background: $orange;
-      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-      border-radius: 6px;
-      color: $white;
-      font-size: 14px;
-      border: none;
     }
   }
 }
 
-.event-section-wrapper{
+.event-section-wrapper {
   @media only screen and (min-width: 1281px) {
-   display:flex;
-    justify-content:center; 
+    display: flex;
+    justify-content: center;
   }
 }
 
-.header-container{
-width: 375px;
+.header-container {
+  width: 375px;
 
   .event-header {
     background: $pink;
@@ -90,17 +91,15 @@ width: 375px;
     font-family: $serif;
     font-size: 20px;
     padding: 16px;
-    
   }
 }
 
-.all-events{
-  @media only screen and (min-width:1281px){
-  display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-
+.all-events {
+  @media only screen and (min-width: 1281px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -115,14 +114,13 @@ align-items: center;
   @media only screen and (min-width: 1281px) {
     width: 582px;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
     border-radius: 6px;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-
   }
 
-  .space-event-page{
-    height:32px;
+  .space-event-page {
+    height: 32px;
   }
 
   .event-card-wrapper {
@@ -252,40 +250,38 @@ align-items: center;
       right: 0;
 
       .event-read-more {
-        width: 124px;
-        height: 32px;
-        background: none;
-        border: none;
+        @include button(124px, 32px, transparent, none, 14px, #000, none);
       }
 
       .buy-ticket {
-        width: 142px;
-        height: 32px;
-        background: $orange;
-        box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 6px 0px 0px 0px;
-        font-family: $sans-serif;
-        font-size: 12px;
-        color: $white;
-        border: none;
+        @include button(
+          142px,
+          32px,
+          $orange,
+          6px 0px 0px 0px,
+          12px,
+          $white,
+          0px 2px 2px rgba(0, 0, 0, 0.25)
+        );
       }
     }
   }
   .all-events-btn {
+    @include button(
+      135px,
+      38px,
+      $orange,
+      6px,
+      14px,
+      $white,
+      0px 2px 2px rgba(0, 0, 0, 0.25)
+    );
     position: absolute;
     bottom: -17px;
     left: 0;
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    width: 111px;
-    height: 38px;
-    background: $orange;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-    border-radius: 6px;
-    color: $white;
-    font-size: 14px;
-    border: none;
   }
 }
 
@@ -307,8 +303,8 @@ align-items: center;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
 
     @media only screen and (min-width: 1281px) {
-      width:582px;
-     }
+      width: 582px;
+    }
 
     h1 {
       font-family: $serif;
@@ -339,26 +335,27 @@ align-items: center;
         font-family: $sans-serif;
 
         @media only screen and (min-width: 1281px) {
-        width: 550px;
+          width: 550px;
         }
       }
     }
 
     button {
+      @include button(
+        111px,
+        38px,
+        $orange,
+        6px,
+        14px,
+        $white,
+        0px 2px 2px rgba(0, 0, 0, 0.25)
+      );
       position: absolute;
       bottom: -17px;
       left: 0;
       right: 0;
       margin-left: auto;
       margin-right: auto;
-      width: 111px;
-      height: 38px;
-      background: $orange;
-      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-      border-radius: 6px;
-      color: $white;
-      font-size: 14px;
-      border: none;
       z-index: 5;
     }
   }
