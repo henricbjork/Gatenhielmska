@@ -54,7 +54,7 @@
 
         <?php if (count($events)) : ?>
             <section class="events">
-
+                <div class="space-event-page"></div>
                 <?php foreach ($events as $post) : setup_postdata($post); ?>
                     <?php $eventTypes = get_the_terms($post, 'event-type'); ?>
 
