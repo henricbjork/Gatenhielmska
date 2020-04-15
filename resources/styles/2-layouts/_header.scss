@@ -125,6 +125,12 @@
   .banner-image {
     width: 375px;
     height: 256px;
+
+    @media only screen and (min-width: 1281px) {
+      width: 582px;
+      height: 311px;
+    }
+    
   }
   .logo {
     width: 64px;
@@ -141,5 +147,10 @@
     letter-spacing: 0.02em;
     color: $dark;
     margin-bottom: 50px;
+
+    @media only screen and (min-width: 1281px) {
+      font-size: 48px;
+      line-height: 62px;
+    }
   }
 }
