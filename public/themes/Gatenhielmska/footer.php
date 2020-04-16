@@ -9,9 +9,9 @@
       <img class="footer-image" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/wave.svg" />
       <img class="footer-bird" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/bird.svg" />
     </div>
-  <?php endif; ?>
-  <footer>
-    <div class="contact-info">
+    <?php endif; ?>
+    <footer>
+      <div class="contact-info">
       <p>Kontakta oss!</p>
       <p>Stigbergstorget 7, 414 63 Göteborg</p>
       <a href="mailto: kontakt@gathenhielmska.se">kontakt@gathenhielmska.se</a>
