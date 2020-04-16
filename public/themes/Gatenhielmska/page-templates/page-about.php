@@ -29,36 +29,38 @@
 
 
     <h1 class="about-title">Hyresgäster</h1>
+    <section class="tenants-wrapper">
 
-    <?php $tenants = get_posts(['post_type' => 'tenants']); ?>
-    <?php if (count($tenants)) : ?>
-        <?php foreach ($tenants as $post) : setup_postdata($post); ?>
-            <?php $postContent = get_the_content($post) ?>
-            <?php
-            $image = get_field('image_tenant');
-            $size = array('243', '243');
-            ?>
-            <div class="tenants">
-                <div class="tenant">
+        <?php $tenants = get_posts(['post_type' => 'tenants']); ?>
+        <?php if (count($tenants)) : ?>
+            <?php foreach ($tenants as $post) : setup_postdata($post); ?>
+                <?php $postContent = get_the_content($post) ?>
+                <?php
+                $image = get_field('image_tenant');
+                $size = array('243', '243');
+                ?>
+                <div class="tenants">
+                    <div class="tenant">
 
-                    <?php echo wp_get_attachment_image($image, $size, "", ["class" => "tentants-image"]); ?>
+                        <?php echo wp_get_attachment_image($image, $size, "", ["class" => "tentants-image"]); ?>
 
-                    <?php if (get_field('company')) : ?>
-                        <h1><?php the_field('company'); ?></h1>
-                    <?php endif ?>
+                        <?php if (get_field('company')) : ?>
+                            <h1><?php the_field('company'); ?></h1>
+                        <?php endif ?>
 
-                    <?php if (get_field('contact')) : ?>
-                        <p><?php the_field('contact'); ?></p>
-                    <?php endif ?>
+                        <?php if (get_field('contact')) : ?>
+                            <p><?php the_field('contact'); ?></p>
+                        <?php endif ?>
 
-                    <?php if (get_field('email')) : ?>
-                        <p><?php the_field('email'); ?></p>
-                    <?php endif ?>
+                        <?php if (get_field('email')) : ?>
+                            <p><?php the_field('email'); ?></p>
+                        <?php endif ?>
+                    </div>
+
                 </div>
-
-            </div>
-        <?php endforeach; ?>
-    <?php endif; ?>
+            <?php endforeach; ?>
+        <?php endif; ?>
+    </section>
 </section>
 
 <?php get_footer();
