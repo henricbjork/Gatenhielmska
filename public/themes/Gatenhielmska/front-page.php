@@ -23,7 +23,7 @@
                 <?php endforeach; ?>
             <?php endif; ?>
         </div>
-        <a href="http://localhost:8000/nyheter/"><button>Fler nyheter</button></a>
+        <a href="/nyheter"><button>Fler nyheter</button></a>
     </div>
 </section>
 
