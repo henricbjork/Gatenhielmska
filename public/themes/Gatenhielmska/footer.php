@@ -12,11 +12,11 @@
   <?php endif; ?>
   <footer>
     <div class="contact-info">
-      <h1>Kontakta oss!</h1>
+      <p>Kontakta oss!</p>
       <p>Stigbergstorget 7, 414 63 Göteborg</p>
-      <p>kontakt@gathenhielmska.se</p>
+      <a href="mailto: kontakt@gathenhielmska.se">kontakt@gathenhielmska.se</a>
       <div class="social-media">
-        <h1>Följ oss!</h1>
+        <p>Följ oss!</p>
         <div class="media-icons">
           <a><img src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/instagram.svg" alt=""></a>
           <a><img src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/facebok.svg" alt=""></a>
