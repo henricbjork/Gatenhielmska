@@ -1,23 +1,34 @@
-.footer-top {
-  max-height: 120px;
-  overflow: hidden;
-  position: relative;
+footer {
+  .footer-top {
+    position: relative;
 
-  .footer-image {
-    width: 100%;
-    z-index: 1;
-  }
-  .footer-bird {
-    position: absolute;
-    right: 8px;
-    width: 133px;
-    height: 120px;
-    @media only screen and (min-width: 1281px) {
-      height: 120px;
+    .footer-wave {
+      max-height: 120px;
+      overflow: hidden;
+
+      .footer-image {
+        width: 100%;
+      }
+    }
+
+    .footer-bird {
+      position: absolute;
+      right: 10px;
+      top: -30px;
+      @media only screen and (min-width: 1281px) {
+        top: -120px;
+      }
+
+      img {
+        width: 133px;
+        height: 120px;
+        @media only screen and (min-width: 1281px) {
+          width: 370px;
+          height: 334px;
+        }
+      }
     }
   }
-}
-footer {
   .contact-info {
     border: 1px solid $bluegreen;
     background: $bluegreen;
