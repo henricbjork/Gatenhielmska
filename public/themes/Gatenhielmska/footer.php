@@ -1,17 +1,17 @@
   <?php wp_footer(); ?>
-  <?php if ($pagename === 'kalender') : ?>
-    <div class="footer-top" style="background: #ebc8bf;">
-      <img class="footer-image" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/wave.svg" />
-      <img class="footer-bird" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/bird.svg" />
-    </div>
-  <?php else : ?>
-    <div class="footer-top">
-      <img class="footer-image" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/wave.svg" />
-      <img class="footer-bird" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/bird.svg" />
-    </div>
+  <footer>
+    <?php if ($pagename === 'kalender') : ?>
+      <div class="footer-top" style="background: #ebc8bf;">
+        <div class="footer-wave"><img class="footer-image" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/wave.svg" /></div>
+        <div class="footer-bird"> <img class="footer-bird" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/bird.svg" /></div>
+      </div>
+    <?php else : ?>
+      <div class="footer-top">
+        <div class="footer-wave"><img class="footer-image" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/wave.svg" /></div>
+        <div class="footer-bird"> <img class="footer-bird" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/bird.svg" /></div>
+      </div>
     <?php endif; ?>
-    <footer>
-      <div class="contact-info">
+    <div class="contact-info">
       <p>Kontakta oss!</p>
       <p>Stigbergstorget 7, 414 63 Göteborg</p>
       <a href="mailto: kontakt@gathenhielmska.se">kontakt@gathenhielmska.se</a>
