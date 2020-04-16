@@ -176,8 +176,11 @@
   .news-card-image-container {
     width: 327px;
     height: 264px;
-
+    @media only screen and (min-width: 1281px) {
+      width: 582px;
+    }
     .news-card-image {
+      width: 100%;
       object-fit: cover;
       border-radius: 6px 0 0 0;
     }
