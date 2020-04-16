@@ -55,7 +55,9 @@
 
 
             <div class="news-card">
-                <?php echo wp_get_attachment_image($image, $size, "", ["class" => "news-card-image"]); ?>
+                <div class="news-card-image-container">
+                    <?php echo wp_get_attachment_image($image, $size, "", ["class" => "news-card-image"]); ?>
+                </div>
                 <div class="news-card-text">
                     <h1 class="news-card-header"><?php the_title(); ?></h1>
 
