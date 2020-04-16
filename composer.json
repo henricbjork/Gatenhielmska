@@ -17,6 +17,7 @@
         "wpackagist-plugin/disable-gutenberg": "^2.1",
         "wpackagist-plugin/feeds-for-youtube": "^1.2",
         "wpackagist-plugin/instagram-feed": "^2.3",
+        "wpackagist-plugin/polylang": "^2.7",
         "wpackagist-plugin/wp-migrate-db": "^1.0"
     },
     "config": {

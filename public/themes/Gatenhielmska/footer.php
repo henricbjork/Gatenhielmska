@@ -8,7 +8,7 @@
     <?php else : ?>
       <div class="footer-top">
         <div class="footer-wave"><img class="footer-image" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/wave.svg" /></div>
-        <div class="footer-bird"> <img class="footer-bird" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/bird.svg" /></div>
+        <div class="footer-bird"> <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/bird.svg" /></div>
       </div>
     <?php endif; ?>
     <div class="contact-info">
