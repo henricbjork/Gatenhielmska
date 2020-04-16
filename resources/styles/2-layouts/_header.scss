@@ -7,17 +7,24 @@
   -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.43);
   -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.43);
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.43);
+  position: relative;
 
   .menu-icon {
     position: absolute;
     top: 20px;
     left: 20px;
+    @media only screen and (min-width: 1281px) {
+      left: 435px;
+    }
   }
 
   .search-icon {
     position: absolute;
     top: 16px;
     right: 20px;
+    @media only screen and (min-width: 1281px) {
+      right: 435px;
+    }
   }
 }
 
@@ -26,7 +33,6 @@
 }
 
 .search-form {
-
   .hidden {
     display: none;
   }
@@ -130,7 +136,6 @@
       width: 582px;
       height: 311px;
     }
-    
   }
   .logo {
     width: 64px;
