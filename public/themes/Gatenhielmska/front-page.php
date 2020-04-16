@@ -4,7 +4,7 @@
     <div class="news">
         <p class="news-prompt">På gång i huset</p>
         <div class="news-items">
-            <?php $news = get_posts(['post_type' => 'news']); ?>
+            <?php $news = get_posts(['post_type' => 'news', 'numberposts' => 2]); ?>
             <?php if (count($news)) : ?>
                 <?php foreach ($news as $post) : setup_postdata($post); ?>
                     <?php $postContent = get_the_content($post) ?>
