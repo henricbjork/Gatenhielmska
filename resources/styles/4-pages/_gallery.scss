@@ -1,13 +1,11 @@
 .gallery-container {
   padding: 40px 24px 80px 24px;
 
-    @media only screen and (min-width:1281px){
+  @media only screen and (min-width: 1281px) {
     display: flex;
     flex-direction: column;
     align-items: center;
-     
-    }
-
+  }
 
   a {
     text-decoration: none;
@@ -23,10 +21,9 @@
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
     background: $pink;
     border-radius: 6px;
-    @media only screen and (min-width:1281px){
+    @media only screen and (min-width: 1281px) {
       width: 640px;
     }
-
 
     p {
       font-family: $sans-serif;
@@ -50,8 +47,8 @@
     height: 0;
     overflow: hidden;
     transition: 0.3s ease-out;
-    @media only screen and (min-width:1281px){
-      width:640px;
+    @media only screen and (min-width: 1281px) {
+      width: 640px;
     }
 
     #sb_instagram .sb_instagram_header h3 {
@@ -85,6 +82,9 @@
     justify-content: center;
     position: relative;
     display: none;
+    @media only screen and (min-width: 1281px) {
+      width: 640px;
+    }
 
     .shrink-icon {
       position: absolute;
@@ -110,8 +110,8 @@
   background: $pink;
   border-radius: 6px;
   margin-top: 32px;
-  @media only screen and (min-width:1281px){
-    width:640px;
+  @media only screen and (min-width: 1281px) {
+    width: 640px;
   }
 
   p {
@@ -133,8 +133,8 @@
   border-left: 2px solid $pink;
   border-right: 2px solid $pink;
   transition: 0.4s;
-  @media only screen and (min-width:1281px){
-    width:640px;
+  @media only screen and (min-width: 1281px) {
+    width: 640px;
   }
 
   .videos-header {
@@ -162,6 +162,11 @@
 
     iframe {
       margin: 4px 0px 4px 0px;
+      width: 100%;
+      height: 215px;
+      @media only screen and (min-width: 1281px) {
+        height: 400px;
+      }
     }
 
     .youtube-btn {
@@ -183,6 +188,9 @@
   justify-content: center;
   position: relative;
   display: none;
+  @media only screen and (min-width: 1281px) {
+    width: 640px;
+  }
 
   .video-shrink-icon {
     position: absolute;

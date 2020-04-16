@@ -22,8 +22,8 @@
             <p>Gatenhielmska</p>
         </div>
         <div class="videos">
-            <iframe width="100%" height="215" src="https://www.youtube.com/embed/Jh5oX0VRnzk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <iframe width="100%" height="215" src="https://www.youtube.com/embed/izTaPcZZAXs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/Jh5oX0VRnzk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/izTaPcZZAXs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <a href="#"><button class="youtube-btn">GÅ TILL YOUTUBE</button></a>
         </div>
     </div>
