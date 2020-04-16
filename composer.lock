@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c1d6519c800894d2c3348b485015ee58",
+    "content-hash": "3354da1546549f8911481ed6da17304e",
     "packages": [
         {
             "name": "composer/installers",
@@ -1045,6 +1045,7 @@
                 "wordplate",
                 "wordpress"
             ],
+            "abandoned": "https://vinkla.dev/administration-ui",
             "time": "2019-08-08T13:02:18+00:00"
         },
         {
@@ -1053,11 +1054,11 @@
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/acf-better-search/",
-                "reference": "tags/3.5.1"
+                "reference": "trunk"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/acf-better-search.3.5.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/acf-better-search.zip?timestamp=1584629788"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1136,6 +1137,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/instagram-feed/"
+        },
+        {
+            "name": "wpackagist-plugin/polylang",
+            "version": "2.7.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/polylang/",
+                "reference": "tags/2.7.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/polylang.2.7.1.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/polylang/"
         },
         {
             "name": "wpackagist-plugin/wp-migrate-db",

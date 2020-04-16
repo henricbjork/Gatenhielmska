@@ -33,6 +33,7 @@
             <img class="cross-icon" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/cross.svg" />
             <img class="logo" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/logowhite.svg" />
             <?php wp_nav_menu(['theme_location' => 'navigation']); ?>
+            <p>Sv/Eng</p>
         </nav>
 
 
