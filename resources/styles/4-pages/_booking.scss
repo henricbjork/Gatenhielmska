@@ -15,6 +15,9 @@
     align-items: center;
     text-align: center;
     margin: 24px 0 0 0;
+    @media only screen and (min-width: 1281px) {
+      font-size: 36px;
+    }
   }
 
   .booking-form {
