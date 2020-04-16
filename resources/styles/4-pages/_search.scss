@@ -4,6 +4,14 @@
   align-items: center;
   min-height: 20vh;
 
+  .searchform{
+    @media only screen and (min-width: 1281px){
+      display:flex;
+      text-align: end;
+      margin-right: 36px;
+    }
+  }
+
   h1 {
     font-size: 22px;
     font-family: $serif;

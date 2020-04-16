@@ -45,7 +45,7 @@
             <section class="banner">
                 <img class="banner-image" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/bannerimage2.png" />
                 <img class="logo" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/logoblack.svg" />
-                <h1>GATENHIELMSKA</h1>
+                <h1>GATHENHIELMSKA</h1>
             </section>
         <?php endif; ?>
     </header>

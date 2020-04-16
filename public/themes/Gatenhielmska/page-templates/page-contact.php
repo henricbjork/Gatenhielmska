@@ -18,47 +18,49 @@
         <h1>Adress</h1>
         <p><?php the_field('address') ?></p>
         <h1>Kontakt</h1>
-        <p><?php the_field('phone') ?></br><?php the_field('email') ?></p>
+        <p>Telefon: <?php the_field('phone') ?></br>E-post: <?php the_field('email') ?></p>
 
     </div>
 
     <h1 class="contact-title">Ledningsgruppen</h1>
+    <section class="management-wrapper">
 
-    <?php $management = get_posts(['post_type' => 'management']); ?>
-    <?php if (count($management)) : ?>
-        <?php foreach ($management as $post) : setup_postdata($post); ?>
-            <?php $postContent = get_the_content($post) ?>
-            <?php
-            $image = get_field('image_management');
-            $size = array('243', '243');
-            ?>
-            <div class="management-container">
-                <div class="management">
+        <?php $management = get_posts(['post_type' => 'management']); ?>
+        <?php if (count($management)) : ?>
+            <?php foreach ($management as $post) : setup_postdata($post); ?>
+                <?php $postContent = get_the_content($post) ?>
+                <?php
+                $image = get_field('image_management');
+                $size = array('243', '243');
+                ?>
+                <div class="management-container">
+                    <div class="management">
 
-                    <?php echo wp_get_attachment_image($image, $size, "", ["class" => "management-image"]); ?>
+                        <?php echo wp_get_attachment_image($image, $size, "", ["class" => "management-image"]); ?>
 
-                    <?php if (get_field('full_name')) : ?>
-                        <h1><?php the_field('full_name'); ?></h1>
-                    <?php endif ?>
+                        <?php if (get_field('full_name')) : ?>
+                            <h1><?php the_field('full_name'); ?></h1>
+                        <?php endif ?>
 
-                    <?php if (get_field('work_title')) : ?>
-                        <p><?php the_field('work_title'); ?></p>
-                    <?php endif ?>
+                        <?php if (get_field('work_title')) : ?>
+                            <p><?php the_field('work_title'); ?></p>
+                        <?php endif ?>
 
-                    <?php if (get_field('email')) : ?>
-                        <p><?php the_field('email'); ?></p>
-                    <?php endif ?>
+                        <?php if (get_field('email')) : ?>
+                            <p><?php the_field('email'); ?></p>
+                        <?php endif ?>
+                    </div>
+
                 </div>
-
-            </div>
-        <?php endforeach; ?>
-    <?php endif; ?>
+            <?php endforeach; ?>
+        <?php endif; ?>
+    </section>
 
     <section class="contact-form">
         <div class="contact-form-container">
             <h1>Vill du bli en av oss?</h1>
             <p>Vi söker ständigt volontärer att arbeta på våra olika evenemang. Brinner du för konst och kultur? skicka då in en spontanansökan så kanske vi hör av oss!</p>
-            <form>
+            <form class="contact-form-flex">
                 <label for="name">För- och efternamn:</label>
                 <input type="text" name="name" id="name">
                 <label for="email">E-post:</label>
