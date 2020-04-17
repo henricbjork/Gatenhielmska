@@ -64,5 +64,8 @@ $ npm run dev
 - Sally Lidholm Ström
 - Marcus Sjöholm
 
+## License
+MIT
+
 ## Documentation for wordplate
 Visit the [official documentation](https://wordplate.github.io/) page if you want to dive right in and start building WordPress applications with WordPlate. The documentation is thorough, complete, and makes it a breeze to get started learning WordPlate.
