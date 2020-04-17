@@ -42,8 +42,7 @@ else : ?>
 
 <?php if (count($events)) : ?>
     <section class="event-section-wrapper">
-
-        <section class="events">
+        <section class="events" <?php if ($pagename === '') : ?> style="background: #ebc8bf;" <?php endif; ?>>
             <div class="header-container">
                 <h2 class="event-header">Evenemang & Utställningar</h2>
             </div>

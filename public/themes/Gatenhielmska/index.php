@@ -57,7 +57,6 @@
                 <div class="space-event-page"></div>
                 <?php foreach ($events as $post) : setup_postdata($post); ?>
                     <?php $eventTypes = get_the_terms($post, 'event-type'); ?>
-
                     <div class="event-card-wrapper">
                         <div class="event-card">
                             <div class="event-date">
