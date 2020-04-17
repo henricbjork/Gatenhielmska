@@ -1,10 +1,10 @@
 .calender-main {
   background: $pink;
   background: url("./../../images/backgroundcalender.png") no-repeat;
-  background-size: cover;
+  background-size: 100%;
   @media only screen and (min-width: 1281px) {
     background: url("./../../images/backgroundmobile.png") no-repeat;
-    background-size: cover;
+    background-size: 100%;
   }
 
   .calender-page-name {
